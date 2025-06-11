@@ -8,6 +8,7 @@ package com.example.musicmanagement.entity;
    private long albumId;
    private String title;
    private String artist;
+   private String comment;
    @DateTimeFormat(pattern = "yyyy-MM-dd")
    private LocalDate releaseDate;
    private LocalDateTime createdAt;

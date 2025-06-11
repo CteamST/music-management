@@ -26,6 +26,7 @@ public class AlbumService {
     album.setTitle(albumForm.getTitle());
     album.setArtist(albumForm.getArtist());
     album.setReleaseDate(albumForm.getReleaseDate());
+    album.setComment(albumForm.getComment());
     albumRepository.insertAlbum(album);
   }
 
