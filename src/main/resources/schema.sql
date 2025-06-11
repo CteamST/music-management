@@ -4,6 +4,7 @@ CREATE TABLE IF NOT EXISTS albums (
     artist VARCHAR(255),
     release_date DATE,
     comment VARCHAR(255),
+    priority INTEGER ,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 

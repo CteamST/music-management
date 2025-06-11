@@ -9,6 +9,7 @@ package com.example.musicmanagement.entity;
    private String title;
    private String artist;
    private String comment;
+   private int priority;
    @DateTimeFormat(pattern = "yyyy-MM-dd")
    private LocalDate releaseDate;
    private LocalDateTime createdAt;

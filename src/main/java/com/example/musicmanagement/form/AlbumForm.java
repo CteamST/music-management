@@ -7,4 +7,5 @@ package com.example.musicmanagement.form;
    private String artist;
    private LocalDate releaseDate;
    private String comment;
+   private int priority;
  }
