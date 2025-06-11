@@ -7,26 +7,22 @@
       sample message
      <div th:if="${error}" th:text="${error}" style="color:red">sample message</div>
     </div>
-    <h3>アルバム詳細</h3>
+    <h3>To DO 詳細</h3>
     <table>
-      <tr>
-        <th>アルバムID</th>
-        <td th:text="${album.albumId}"></td>
-      </tr>
       <tr>
         <th>タイトル</th>
         <td th:text="${album.title}"></td>
       </tr>
       <tr>
-        <th>アーティスト</th>
+        <th>担当者</th>
         <td th:text="${album.artist}"></td>
       </tr>
       <tr>
-        <th>リリース日</th>
+        <th>締め切り日</th>
         <td th:text="${album.releaseDate}"></td>
       </tr>
       <tr>
-        <th>作成日時</th>
+        <th>優先順位</th>
         <td
           th:text="${#temporals.format(album.createdAt, 'yyyy-MM-dd HH:mm:ss')}"
         ></td>
@@ -87,7 +83,7 @@
       </table>
     </table>
     <a th:href="@{/albums/{albumId}/musics/new(albumId=${album.albumId})}"
-      >楽曲を追加</a
+      >タスクを追加</a
     >
     <a href="/albums">一覧に戻る</a>
     <div th:replace="~{layout :: footer}"></div>
