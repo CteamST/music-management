@@ -7,10 +7,10 @@
   <body>
     <div th:fragment="header">
       <header style="background-color: #f8f8f8">
-        <h4>楽曲管理アプリ</h4>
+        <h4>To do管理アプリ</h4>
         <ul>
-          <li sec:authorize="isAuthenticated()"><a th:href="@{/albums}">アルバム一覧</a></li>
-            <li sec:authorize="isAuthenticated()"><a th:href="@{/albums/new}">アルバム登録</a></li>
+          <li sec:authorize="isAuthenticated()"><a th:href="@{/albums}">タスク一覧</a></li>
+            <li sec:authorize="isAuthenticated()"><a th:href="@{/albums/new}">タスク登録</a></li>
             <li sec:authorize="isAnonymous()"><a th:href="@{/register}">ユーザ登録</a></li>
             <li sec:authorize="isAuthenticated()">
             <form th:action="@{/logout}" method="post">
@@ -22,7 +22,7 @@
     </div>
     <div th:fragment="footer">
       <footer style="background-color: #f8f8f8; text-align: center">
-        <p>&copy; 楽曲管理アプリ</p>
+        <p>&copy; To do アプリ</p>
       </footer>
     </div>
   </body>

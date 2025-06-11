@@ -3,22 +3,22 @@
   <head th:replace="~{layout :: head(アルバム編集)}"></head>
   <body>
     <div th:replace="~{layout :: header}"></div>
-    <h3>アルバム編集</h3>
+    <h3>タスク編集</h3>
     <form
       th:action="@{/albums/{albumId}/edit(albumId=${album.albumId})}"
       th:object="${album}"
       method="post"
     >
       <div>
-        <label for="title">タイトル：</label>
+        <label for="title">タイトル</label>
         <input type="text" id="title" name="title" th:field="*{title}" />
       </div>
       <div>
-        <label for="artist">アーティスト：</label>
+        <label for="artist">担当者</label>
         <input type="text" id="artist" name="artist" th:field="*{artist}" />
       </div>
       <div>
-        <label for="release-date">リリース日：</label>
+        <label for="release-date">締切日：</label>
         <input
           type="date"
           id="release-date"

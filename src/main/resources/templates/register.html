@@ -3,7 +3,7 @@
   <head th:replace="~{layout :: head(ユーザ登録)}"></head>
   <body>
     <div th:replace="~{layout :: header}"></div>
-    <h3>ユーザ登録</h3>
+    <h3>新規登録</h3>
     <form th:action="@{/register}" th:object="${userForm}" method="post">
       <div>
         <label for="username">ユーザ名：</label>
