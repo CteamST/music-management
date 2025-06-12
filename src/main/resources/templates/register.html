@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
-  <head th:replace="~{layout :: head(ユーザ登録)}"></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo管理</title>
+  <link rel="stylesheet" href="css/register.css">
+</head>
   <body>
     <div th:replace="~{layout :: header}"></div>
     <h3>新規登録</h3>
     <form th:action="@{/register}" th:object="${userForm}" method="post">
       <div>
-        <label for="username">ユーザ名：</label>
+        <label for="username"></label>
         <input
           type="text"
           id="username"
           name="username"
           th:field="*{username}"
+          placeholder="ユーザー名"
         />
       </div>
       <div>
-        <label for="password">パスワード：</label>
+        <label for="password"></label>
         <input
           type="password"
           id="password"
           name="password"
           th:field="*{password}"
+          placeholder="パスワード"
         />
       </div>
       <button type="submit">登録</button>
