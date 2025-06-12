@@ -8,7 +8,7 @@
       sample message
      <div th:if="${error}" th:text="${error}" style="color:red">sample message</div>
     </div>
-    <h3>To DO 詳細</h3>
+    <h3>To Do 詳細</h3>
     <table>
       <tr>
         <th>タイトル</th>
@@ -27,14 +27,16 @@
         <td
           th:text="${#temporals.format(album.createdAt, 'yyyy-MM-dd HH:mm:ss')}"
         ></td>
+      <!--ついかしたとこ-->
+      <tr>
+        <th>メモ</th>
+        <td th:text="${album.comment}"></td>
       </tr>
-      <h3>楽曲一覧</h3>
+      <!--ここまで-->
+      </tr>
+
       <table>
         <tr>
-          <th>お気に入り</th>
-          <th>楽曲ID</th>
-          <th>タイトル</th>
-          <th>再生時間</th>
           <th>タスク</th>
           <th>日付</th>
           <th>進行度</th>
@@ -43,12 +45,12 @@
           <td><span th:text="${music.musicId}">music id</span></td>
           <td><span th:text="${music.title}">music title</span></td>
           <td><span th:text="${music.isFavorite ? '☆' : ''}">☆</span></td>
-
           <td>
             <span th:text="${#temporals.format(music.duration, 'HH:mm:ss')}"
               >music duration</span
             >
           </td>
+  
           <td>
             <span th:text="${#temporals.format(music.duration, 'HH:mm:ss')}"
               >music duration</span
