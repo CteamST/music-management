@@ -34,7 +34,9 @@
           <th>楽曲ID</th>
           <th>タイトル</th>
           <th>再生時間</th>
-          <th></th>
+          <th>タスク</th>
+          <th>日付</th>
+          <th>進行度</th>
         </tr>
         <tr th:each="music : ${musics}">
           <td><span th:text="${music.musicId}">music id</span></td>
