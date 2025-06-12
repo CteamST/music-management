@@ -27,6 +27,14 @@
           th:field="*{releaseDate}"
         />
       </div>
+      <div>
+        <label for="priority">優先順位：</label>
+        <select id="priority" name="priority" th:field="*{priority}">
+          <option th:value="1" th:selected="${album.priority == 1}">低</option>
+          <option th:value="2" th:selected="${album.priority == 2}">中</option>
+          <option th:value="3" th:selected="${album.priority == 3}">高</option>
+        </select>
+      </div>
       <button type="submit">変更</button>
     </form>
     <div th:replace="~{layout :: footer}"></div>

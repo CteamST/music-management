@@ -7,11 +7,12 @@
     <div>
         <div th:if="${error}" th:text="${error}" style="color:red">sample message</div>
     </div>
-    <h3>To DO 一覧</h3>
+    <h3>ToDo 一覧</h3>
     <table>
       <thead>
         <tr>
-          <th>タイトル</th>
+          <th>ID</th>
+          <th>タスク</th>
           <th>担当者</th>
           <th>締め切り日</th>
           <th>優先順位</th>
@@ -21,14 +22,15 @@
       <tbody>
         <tr th:each="album : ${albums}">
           <td><span th:text="${album.albumId}">album id</span></td>
-          <td>
-            <a th:href="@{/albums/{albumId}(albumId=${album.albumId})}"
-              ><span th:text="${album.title}">album title</span></a
-            >
-          </td>
+          <td><span th:text="${album.title}">album title</span></td>
           <td><span th:text="${album.artist}">album artist</span></td>
           <td><span th:text="${album.releaseDate}">album releaseDate</span></td>
-          <td><span th:text="${album.musicCount}">album musicCount</span></td>
+          <td th:switch="${album.priority}">
+            <span th:case="1">低</span>
+            <span th:case="2">中</span>
+            <span th:case="3">高</span>
+            <span th:case="*">${album.priority}</span>
+          </td>
           <td>
             <form
               th:action="@{/albums/{albumId}/edit(albumId=${album.albumId})}"
@@ -41,6 +43,12 @@
               method="post"
             >
               <button type="submit">削除</button>
+            </form>
+            </form>
+            <form
+              th:action="@{/albums/{albumId}(albumId=${album.albumId})}"
+            >
+              <button type="submit">詳細</button>
             </form>
           </td>
         </tr>
