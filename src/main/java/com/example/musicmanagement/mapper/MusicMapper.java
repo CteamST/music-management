@@ -15,14 +15,14 @@ public interface MusicMapper {
     @Select("SELECT * FROM musics WHERE album_id = #{albumId}")
     List<Music> selectMusicsById(long album_id);
 
-    @Insert("INSERT INTO musics (title, duration, album_id) VALUES (#{title}, #{duration}, #{albumId})")
+    @Insert("INSERT INTO musics (title, daydate, progress, album_id) VALUES (#{title}, #{daydate}, #{progress}, #{albumId})")
     @Options(useGeneratedKeys = true, keyProperty = "musicId")
     void insertMusic(Music music);
 
     @Delete("DELETE FROM musics WHERE music_id = #{musicId}")
     void deleteMusicById(long musicId);
 
-    @Update("UPDATE musics SET title = #{title}, duration = #{duration} WHERE music_id = #{musicId}")
+    @Update("UPDATE musics SET title = #{title}, daydate = #{daydate}, progress = #{progress} WHERE music_id = #{musicId}")
     void updateMusic(Music music);
 
     @Select("SELECT * FROM musics WHERE music_id = #{musicId}")
@@ -32,7 +32,8 @@ public interface MusicMapper {
             SELECT
                 musics.music_id,
                 title,
-                duration,
+                daydate,
+                progress,
                 favorites.user_id IS NOT NULL AS is_favorite
             FROM musics
             LEFT JOIN favorites ON musics.music_id = favorites.music_id AND favorites.user_id = #{userId}

@@ -1,11 +1,14 @@
 package com.example.musicmanagement.form;
 
 import lombok.Data;
-import java.time.LocalTime;
+
+import java.time.LocalDate;
+
 
 @Data
 public class MusicForm {
     private String title;
-    private LocalTime duration;
+    private LocalDate daydate;
+    private int progress ;
     private long albumId;
 }

@@ -11,7 +11,8 @@ CREATE TABLE IF NOT EXISTS albums (
 CREATE TABLE IF NOT EXISTS  musics (
     music_id INTEGER AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR NOT NULL,
-    duration TIME,
+    daydate DATE,
+    progress INTEGER,
     album_id INTEGER NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (album_id) REFERENCES albums(album_id)

@@ -1,16 +1,18 @@
 package com.example.musicmanagement.entity;
 
 import lombok.Data;
+
+import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Data
 public class Music {
     private long musicId;
     private String title;
-    @DateTimeFormat(pattern = "HH:mm:ss")
-    private LocalTime duration;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate daydate;
+    private int progress;
     private long albumId;
     private LocalDateTime createdAt;
 }
