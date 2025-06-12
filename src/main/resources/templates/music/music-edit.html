@@ -14,14 +14,8 @@
         <input type="text" id="title" name="title" th:field="*{title}" />
       </div>
       <div>
-        <label for="duration">再生時間：</label>
-        <input
-          type="time"
-          id="duration"
-          name="duration"
-          th:field="*{duration}"
-          step="1"
-        />
+        <label for="daydate">リリース日：</label>
+        <input type="date" id="daydate" name="daydate" th:field="*{Daydate}"/>
       </div>
       <div>
         <input type="hidden" name="musicId" th:field="*{musicId}" />

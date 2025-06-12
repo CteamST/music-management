@@ -14,15 +14,18 @@
         <input type="text" id="title" name="title" th:field="*{title}" />
       </div>
       <div>
-        <label for="duration">再生時間：</label>
-        <input
-          type="time"
-          id="duration"
-          name="duration"
-          th:field="*{duration}"
-          step="1"
-        />
+          <label for="daydate">日付：</label>
+          <input type="date" id="daydate" name="daydate" th:field="*{Daydate}">
       </div>
+      <div>
+            <label for="progress">進捗状況：</label>
+            <select id="progress" name="progress" th:field="*{progress}">
+                <option value="1">未着手</option>
+                <option value="2">進行中</option>
+                <option value="3">完了</option>
+            </select>
+        </div>
+      <div>
       <div>
         <input type="hidden" name="albumId" th:field="*{albumId}" />
       </div>
