@@ -1,0 +1,10 @@
+/* 既存のスタイル */
+/* 共通スタイル */
+
+body {
+  background-image: url('../images/3.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
