@@ -11,34 +11,34 @@
     <div th:if="${error}" th:text="${error}" style="color:red">sample message</div>
   </div>
   <h3>To Do 詳細</h3>
-  <table>
-    <tr>
-      <th>タイトル</th>
-      <td th:text="${album.title}"></td>
-    </tr>
-    <tr>
-      <th>担当者</th>
-      <td th:text="${album.artist}"></td>
-    </tr>
-    <tr>
-      <th>締め切り日</th>
-      <td th:text="${album.releaseDate}"></td>
-    </tr>
-    <tr>
-      <th>優先順位</th>
-      <td th:switch="${album.priority}">
+  <div class="detail-row-title">
+      <span class="label">タイトル</span>
+      <span class="value" th:text="${album.title}">OOさんのタスクの詳細です</span>
+    </div>
+  <div class="flexbox">
+    <div class="detail-row-artist">
+      <span class="label">担当者</span>
+      <span class="value" th:text="${album.artist}">山田太郎</span>
+    </div>
+    <div class="detail-row-releaseDate">
+      <span class="label">締め切り日</span>
+      <span class="value" th:text="${album.releaseDate}">2004年 / 9月25日</span>
+    </div>
+    <div class="detail-row-priority">
+      <span class="label">優先順位</span>
+      <span class="value" th:switch="${album.priority}">
         <span th:case="1">低</span>
         <span th:case="2">中</span>
         <span th:case="3">高</span>
         <span th:case="*">${album.priority}</span>
-      </td>
-      <!--ついかしたとこ-->
-    <tr>
-      <th>メモ</th>
-      <td th:text="${album.comment}"></td>
-    </tr>
-    <!--ここまで-->
-    </tr>
+      </span>
+    </div>
+  </div>
+    <div class="detail-row-comment">
+      <span class="label">メモ</span>
+      <span class="value" th:text="${album.comment}">PowerPointの説明を入力してください</span>
+    </div>
+  </div>
 
     <table>
       <tr>

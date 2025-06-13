@@ -116,3 +116,51 @@ body {
   background-color: green;
   color: white;
 }
+
+.detail-row-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #0a0000;
+    width: 100%; /* フル幅に設定 */
+}
+
+.detail-row-comment{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #0a0000;
+  width: 100%; /* フル幅に設定 */
+}
+
+.flexbox div{
+  margin: 10px;
+  width: 100px;
+  height: 50px;
+}
+
+.flexbox{
+  display:flex;
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.value {
+    flex: 1;
+    text-align: left;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: none;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
