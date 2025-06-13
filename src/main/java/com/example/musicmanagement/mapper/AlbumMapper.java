@@ -35,6 +35,7 @@ public interface AlbumMapper {
       FROM albums
       LEFT OUTER JOIN musics ON albums.album_id = musics.album_id
       GROUP BY albums.album_id, albums.title, artist, release_date, comment, priority
+      ORDER BY priority DESC, release_date ASC
       """)
-  public List<AlbumViewModel> selectAllAlbumsWithMusicCount();
+public List<AlbumViewModel> selectAllAlbumsWithMusicCount();
 }
