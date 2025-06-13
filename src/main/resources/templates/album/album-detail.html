@@ -23,14 +23,13 @@
         <td th:text="${album.releaseDate}"></td>
       </tr>
       <tr>
-        <th>進行度：</th>
-        <td>
-          <select id="priority" name="priority">
-              <option th:value="1" th:selected="${album.priority == 1}">低</option>
-              <option th:value="2" th:selected="${album.priority == 2}">中</option>
-              <option th:value="3" th:selected="${album.priority == 3}">高</option>
-          </select>
-        </td>
+        <th>重要度</th>
+        <td th:switch="${album.priority}">
+            <span th:case="1">低</span>
+            <span th:case="2">中</span>
+            <span th:case="3">高</span>
+            <span th:case="*">${album.priority}</span>
+          </td>
       </tr>
       <!--ついかしたとこ-->
       <tr>
