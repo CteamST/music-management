@@ -20,10 +20,10 @@
       <label for="password"></label>
       <input type="password" id="password" name="password" th:field="*{password}" placeholder="パスワード" />
     </div>
-    <button type="submit">登録</button>
+    <button type="submit" class="register-button">登録</button>
   </form>
   <form th:action="@{/login}">
-    <button type="submit">ログイン</button>
+    <button type="submit" class="login-button">ログイン</button>
   </form>
   <div th:replace="~{layout :: footer}"></div>
 </body>
