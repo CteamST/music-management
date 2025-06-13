@@ -26,7 +26,12 @@
     </tr>
     <tr>
       <th>優先順位</th>
-      <td th:text="${#temporals.format(album.createdAt, 'yyyy-MM-dd HH:mm:ss')}"></td>
+      <td th:switch="${album.priority}">
+        <span th:case="1">低</span>
+        <span th:case="2">中</span>
+        <span th:case="3">高</span>
+        <span th:case="*">${album.priority}</span>
+      </td>
       <!--ついかしたとこ-->
     <tr>
       <th>メモ</th>
