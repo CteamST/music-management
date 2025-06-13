@@ -49,16 +49,16 @@ body {
 
 .edit-button {
   box-sizing: border-box;
-  padding: 10px 20px; /* パディングを調整 */
+  padding: 8px 18px; /* パディングを調整 */
   margin: 5px 0;
   border: none; /* ボーダーを削除 */
   border-radius: 25px; /* 角を丸く */
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold; /* 文字を太く */
   background-color: rgb(40, 39, 39); /* 背景色をダークグレーに */
   color: rgb(244, 241, 241);
-  height: 50px; /* 縦幅を50ピクセルに設定 */
-  width: 150px; /* 横幅を150ピクセルに設定 */
+  height: 40px; /* 縦幅を50ピクセルに設定 */
+  width: 130px; /* 横幅を150ピクセルに設定 */
   transition: background-color 0.3s, transform 0.3s; /* ホバー効果のためのトランジション */
 }
 
@@ -73,12 +73,12 @@ body {
   margin: 5px 0;
   border: none; /* ボーダーを削除 */
   border-radius: 25px; /* 角を丸く */
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold; /* 文字を太く */
   background-color: green; /* 背景色をダークグレーに */
   color: white;
-  height: 50px; /* 縦幅を50ピクセルに設定 */
-  width: 150px; /* 横幅を150ピクセルに設定 */
+  height: 40px; /* 縦幅を50ピクセルに設定 */
+  width: 130px; /* 横幅を150ピクセルに設定 */
   transition: background-color 0.3s, transform 0.3s; /* ホバー効果のためのトランジション */
 }
 
@@ -93,12 +93,12 @@ body {
   margin: 5px 0;
   border: none; /* ボーダーを削除 */
   border-radius: 25px; /* 角を丸く */
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold; /* 文字を太く */
   background-color: gray; /* 背景色をダークグレーに */
   color: white;
-  height: 50px; /* 縦幅を50ピクセルに設定 */
-  width: 150px; /* 横幅を150ピクセルに設定 */
+  height: 40px; /* 縦幅を50ピクセルに設定 */
+  width: 130px; /* 横幅を150ピクセルに設定 */
   transition: background-color 0.3s, transform 0.3s; /* ホバー効果のためのトランジション */
 }
 
@@ -115,4 +115,113 @@ body {
   font-size: 16px;
   background-color: green;
   color: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  text-align: right;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  color: #777;
+  font-size: large;
+  z-index: 3000;
+  /* ヘッダーを他の要素の上に表示 */
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  color: #777;
+  z-index: 3000;
+  /* フッターを他の要素の上に表示 */
+}
+
+.task-button {
+  box-sizing: border-box;
+  padding: 10px 20px; /* パディングを調整 */
+  margin: 5px 0;
+  border: none; /* ボーダーを削除 */
+  border-radius: 25px; /* 角を丸く */
+  font-size: 14px;
+  font-weight: bold; /* 文字を太く */
+  background-color: #4285f4; /* 背景色をダークグレーに */
+  color: white;
+  height: 40px; /* 縦幅を50ピクセルに設定 */
+  width: 130px; /* 横幅を150ピクセルに設定 */
+  transition: background-color 0.3s, transform 0.3s; /* ホバー効果のためのトランジション */
+}
+
+.task-button:hover {
+  background-color: white; /* ホバー時の背景色 */
+  transform: scale(1.05); /* ホバー時の拡大 */
+}
+
+.task2-button {
+  box-sizing: border-box;
+  padding: 10px 20px; /* パディングを調整 */
+  margin: 5px 0;
+  border: none; /* ボーダーを削除 */
+  border-radius: 25px; /* 角を丸く */
+  font-size: 14px;
+  font-weight: bold; /* 文字を太く */
+  background-color: #ea4335; /* 背景色をダークグレーに */
+  color: white;
+  height: 40px; /* 縦幅を50ピクセルに設定 */
+  width: 130px; /* 横幅を150ピクセルに設定 */
+  transition: background-color 0.3s, transform 0.3s; /* ホバー効果のためのトランジション */
+}
+
+.task2-button:hover {
+  background-color: white; /* ホバー時の背景色 */
+  transform: scale(1.05); /* ホバー時の拡大 */
+}
+
+.task2-button {
+  box-sizing: border-box;
+  padding: 10px 20px; /* パディングを調整 */
+  margin: 5px 0;
+  border: none; /* ボーダーを削除 */
+  border-radius: 25px; /* 角を丸く */
+  font-size: 14px;
+  font-weight: bold; /* 文字を太く */
+  background-color: #ea4335; /* 背景色をダークグレーに */
+  color: white;
+  height: 40px; /* 縦幅を50ピクセルに設定 */
+  width: 130px; /* 横幅を150ピクセルに設定 */
+  transition: background-color 0.3s, transform 0.3s; /* ホバー効果のためのトランジション */
+}
+
+.task2-button:hover {
+  background-color: white; /* ホバー時の背景色 */
+  transform: scale(1.05); /* ホバー時の拡大 */
+}
+
+.log-button {
+  box-sizing: border-box;
+  padding: 10px 20px; /* パディングを調整 */
+  margin: 5px 0;
+  border: none; /* ボーダーを削除 */
+  border-radius: 25px; /* 角を丸く */
+  font-size: 14px;
+  font-weight: bold; /* 文字を太く */
+  background-color: rgb(172, 170, 170); /* 背景色をダークグレーに */
+  color: white;
+  height: 40px; /* 縦幅を50ピクセルに設定 */
+  width: 130px; /* 横幅を150ピクセルに設定 */
+  transition: background-color 0.3s, transform 0.3s; /* ホバー効果のためのトランジション */
+}
+
+.log-button:hover {
+  background-color: rgb(183, 181, 181); /* ホバー時の背景色 */
+  transform: scale(1.05); /* ホバー時の拡大 */
 }
