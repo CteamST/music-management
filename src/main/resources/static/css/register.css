@@ -10,7 +10,6 @@ body {
   width: 100%;
   color: #555555;
   display: flex;
-  
   margin: 0;
   font-weight: bold;
 }
@@ -21,7 +20,6 @@ h3 {
   margin-right: 150px;
   margin-top: 180px;
   font-size: 60px;
-  padding-right: ;
 }
 
 form {
@@ -38,7 +36,7 @@ input[type="password"] {
   box-sizing: border-box;
   /* paddingとborderを幅に含める */
   padding: 15px;
-  margin: 10px 0;
+  margin: 10px 0px 0px 150px;
   border-radius: 15px;
   border: 2px solid #7f7f7f;
   font-size: 16px;
