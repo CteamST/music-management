@@ -9,15 +9,25 @@ body {
   height: 100%;
   width: 100%;
   color: #555555;
-  display: flex;
   margin: 0;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  flex-wrap: wrap;
 }
 
 h3 {
   color: #19676b;
   margin-bottom: 60px;
-  margin-right: 150px;
+  margin-right: 0px;
   margin-top: 180px;
   font-size: 60px;
 }
@@ -36,7 +46,7 @@ input[type="password"] {
   box-sizing: border-box;
   /* paddingとborderを幅に含める */
   padding: 15px;
-  margin: 10px 0px 0px 150px;
+  margin: 10px 0px 0px 0px;
   border-radius: 15px;
   border: 2px solid #7f7f7f;
   font-size: 16px;
@@ -53,6 +63,8 @@ button[type="submit"] {
   cursor: pointer;
   font-weight: bold;
   margin-bottom: 10px;
+  transition: transform 0.3s ease;
+  margin-top: 15px;
 }
 
 /* button[type="submit"]:hover { 
@@ -69,6 +81,7 @@ button[type="submit"] {
   color: #7f7f7f;
   background-color: #fff;
   border: 2px solid #ea4335;
+  transform: scale(1.05);
 }
 
 .register-button {
@@ -79,22 +92,7 @@ button[type="submit"] {
   color: #7f7f7f;
   background-color: #fff;
   border: 2px solid #4285f4;
-}
-
-button1[type="submit"] {
-  padding: 10px;
-  background-color: #7f7f7f;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button1[type="submit"]:hover {
-  color: #7f7f7f;
-  background-color: #fff;
-  border: 2px solid #4285f4;
+  transform: scale(1.05);
 }
 
 /* 追加のスタイル */
