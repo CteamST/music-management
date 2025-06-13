@@ -70,22 +70,22 @@
           <form th:if="${music.isFavorite}" th:action="@{/favorites/delete}" method="post">
             <input type="hidden" name="musicId" th:value="${music.musicId}" />
             <input type="hidden" name="albumId" th:value="${album.albumId}" />
-            <button type="submit">お気に入り解除</button>
+            <button type="submit" class="favorite2-button">お気に入り解除</button>
           </form>
           <form th:unless="${music.isFavorite}" th:action="@{/favorites}" method="post">
             <input type="hidden" name="musicId" th:value="${music.musicId}" />
             <input type="hidden" name="albumId" th:value="${album.albumId}" />
-            <button type="submit">お気に入り</button>
+            <button type="submit" class="favorite-button">お気に入り</button>
           </form>
         </td>
       </tr>
     </table>
   </table>
   <form th:action="@{/albums/{albumId}/musics/new(albumId=${album.albumId})}">
-    <button type="submit">タスクを追加</button>
+    <button type="submit" class="add-button">タスクを追加</button>
   </form>
   <form th:action="@{/albums}">
-    <button type="submit">一覧に戻る</button>
+    <button type="submit" class="back-button">一覧に戻る</button>
   </form>
   <div th:replace="~{layout :: footer}"></div>
 </body>

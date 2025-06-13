@@ -35,15 +35,15 @@
               th:action="@{/albums/{albumId}/edit(albumId=${album.albumId})}"
               method="get"
             >
-              <button type="submit">編集</button>
+              <button type="submit" class="edit-button">編集</button>
             </form>
             <form th:action="@{/albums/{albumId}/delete(albumId=${album.albumId})}" method="post"
 >
-              <button type="submit">削除</button>
+              <button type="submit" class="delete-button">削除</button>
             </form>
             </form>
             <form th:action="@{/albums/{albumId}(albumId=${album.albumId})}">
-              <button type="submit">詳細</button>
+              <button type="submit" class="detail-button">詳細</button>
             </form>
           </td>
         </tr>

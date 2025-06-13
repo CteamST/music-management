@@ -8,3 +8,111 @@ body {
   background-attachment: fixed;
 }
 
+.favorite-button {box-sizing: border-box;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 15px;
+  font-size: 16px;
+  background-color: #f6ae41; /* オレンジ */
+  color: white;
+}
+
+.favorite-button2 {box-sizing: border-box;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 15px;
+  font-size: 16px;
+  background-color: #f6ae41; /* オレンジ */
+  color: white;
+}
+
+
+.add-button {
+  box-sizing: border-box;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 15px;
+  font-size: 16px;
+  background-color: #ea4335;
+  color: white;
+}
+
+.back-button {
+  box-sizing: border-box;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 15px;
+  font-size: 16px;
+  background-color: #4285f4;
+  color: white;
+}
+
+.edit-button {
+  box-sizing: border-box;
+  padding: 10px 20px; /* パディングを調整 */
+  margin: 5px 0;
+  border: none; /* ボーダーを削除 */
+  border-radius: 25px; /* 角を丸く */
+  font-size: 18px;
+  font-weight: bold; /* 文字を太く */
+  background-color: rgb(40, 39, 39); /* 背景色をダークグレーに */
+  color: rgb(244, 241, 241);
+  height: 50px; /* 縦幅を50ピクセルに設定 */
+  width: 150px; /* 横幅を150ピクセルに設定 */
+  transition: background-color 0.3s, transform 0.3s; /* ホバー効果のためのトランジション */
+}
+
+.edit-button:hover {
+  background-color: gray; /* ホバー時の背景色 */
+  transform: scale(1.05); /* ホバー時の拡大 */
+}
+
+.detail-button {
+  box-sizing: border-box;
+  padding: 10px 20px; /* パディングを調整 */
+  margin: 5px 0;
+  border: none; /* ボーダーを削除 */
+  border-radius: 25px; /* 角を丸く */
+  font-size: 18px;
+  font-weight: bold; /* 文字を太く */
+  background-color: green; /* 背景色をダークグレーに */
+  color: white;
+  height: 50px; /* 縦幅を50ピクセルに設定 */
+  width: 150px; /* 横幅を150ピクセルに設定 */
+  transition: background-color 0.3s, transform 0.3s; /* ホバー効果のためのトランジション */
+}
+
+.detail-button:hover {
+  background-color: gray; /* ホバー時の背景色 */
+  transform: scale(1.05); /* ホバー時の拡大 */
+}
+
+.delete-button {
+  box-sizing: border-box;
+  padding: 10px 20px; /* パディングを調整 */
+  margin: 5px 0;
+  border: none; /* ボーダーを削除 */
+  border-radius: 25px; /* 角を丸く */
+  font-size: 18px;
+  font-weight: bold; /* 文字を太く */
+  background-color: gray; /* 背景色をダークグレーに */
+  color: white;
+  height: 50px; /* 縦幅を50ピクセルに設定 */
+  width: 150px; /* 横幅を150ピクセルに設定 */
+  transition: background-color 0.3s, transform 0.3s; /* ホバー効果のためのトランジション */
+}
+
+.delete-button:hover {
+  background-color: white; /* ホバー時の背景色 */
+  transform: scale(1.05); /* ホバー時の拡大 */
+}
+
+.change-button {
+  box-sizing: border-box;
+  padding: 12px;
+  margin: 2px 0;
+  border-radius: 15px;
+  font-size: 16px;
+  background-color: green;
+  color: white;
+}
