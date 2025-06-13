@@ -14,11 +14,13 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0;
+  font-weight: bold;
 }
 
 h3 {
-  color: #007bff;
-  margin-bottom: 20px;
+  color: #19676b;
+  margin-bottom: 30px;
+  font-size: 40px;
 }
 
 form {
@@ -27,10 +29,13 @@ form {
   width: 300px;
 }
 
+
 input[type="text"],
 input[type="password"] {
-  width: 100%; /* 入力フィールドを親要素の幅いっぱいに広げる */
-  box-sizing: border-box; /* paddingとborderを幅に含める */
+  width: 100%;
+  /* 入力フィールドを親要素の幅いっぱいに広げる */
+  box-sizing: border-box;
+  /* paddingとborderを幅に含める */
   padding: 15px;
   margin: 10px 0;
   border-radius: 15px;
@@ -40,17 +45,37 @@ input[type="password"] {
   outline: none;
 }
 
+
 button[type="submit"] {
   padding: 10px;
-  background-color: #007bff;
+  background-color: #4285f4;
   color: white;
   border: none;
   border-radius: 30px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 button[type="submit"]:hover {
-  background-color: #0056b3;
+  color: #7f7f7f;
+  background-color: #fff;
+  border: 2px solid #4285f4;
+}
+
+button1[type="submit"] {
+  padding: 10px;
+  background-color: #7f7f7f;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button1[type="submit"]:hover {
+  color: #7f7f7f;
+  background-color: #fff;
+  border: 2px solid #4285f4;
 }
 
 /* 追加のスタイル */
@@ -64,7 +89,9 @@ button[type="submit"]:hover {
   padding: 10px 20px;
   box-sizing: border-box;
   color: #777;
-  z-index: 1000; /* ヘッダーを他の要素の上に表示 */
+  font-size: large;
+  z-index: 3000;
+  /* ヘッダーを他の要素の上に表示 */
 }
 
 .footer {
@@ -77,6 +104,6 @@ button[type="submit"]:hover {
   padding: 10px 20px;
   box-sizing: border-box;
   color: #777;
-  z-index: 1000; /* フッターを他の要素の上に表示 */
+  z-index: 3000;
+  /* フッターを他の要素の上に表示 */
 }
-
