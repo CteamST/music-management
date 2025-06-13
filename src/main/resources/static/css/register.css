@@ -10,17 +10,16 @@ body {
   width: 100%;
   color: #555555;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin: 0;
   font-weight: bold;
 }
 
 h3 {
   color: #19676b;
-  margin-bottom: 30px;
-  font-size: 40px;
+  margin-bottom: 60px;
+  margin-right: 150px;
+  margin-top: 180px;
+  font-size: 60px;
 }
 
 form {
@@ -37,7 +36,7 @@ input[type="password"] {
   box-sizing: border-box;
   /* paddingとborderを幅に含める */
   padding: 15px;
-  margin: 10px 0;
+  margin: 10px 0px 0px 150px;
   border-radius: 15px;
   border: 2px solid #7f7f7f;
   font-size: 16px;
@@ -46,9 +45,8 @@ input[type="password"] {
 }
 
 
-button[type="submit"] {
+button[type="submit"] { 
   padding: 10px;
-  background-color: #4285f4;
   color: white;
   border: none;
   border-radius: 30px;
@@ -57,7 +55,27 @@ button[type="submit"] {
   margin-bottom: 10px;
 }
 
-button[type="submit"]:hover {
+/* button[type="submit"]:hover { 
+  color: #7f7f7f;
+  background-color: #fff;
+  border: 2px solid #4285f4;
+} */
+
+.login-button {
+  background-color: #ea4335;
+}
+
+.login-button:hover {
+  color: #7f7f7f;
+  background-color: #fff;
+  border: 2px solid #ea4335;
+}
+
+.register-button {
+  background-color: #4285f4;
+}
+
+.register-button:hover {
   color: #7f7f7f;
   background-color: #fff;
   border: 2px solid #4285f4;
@@ -108,3 +126,4 @@ button1[type="submit"]:hover {
   z-index: 3000;
   /* フッターを他の要素の上に表示 */
 }
+
