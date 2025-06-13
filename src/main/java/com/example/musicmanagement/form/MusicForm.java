@@ -9,6 +9,6 @@ import java.time.LocalDate;
 public class MusicForm {
     private String title;
     private LocalDate daydate;
-    private int progress ;
+    private int progress;
     private long albumId;
 }

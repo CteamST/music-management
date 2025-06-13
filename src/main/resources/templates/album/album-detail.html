@@ -1,96 +1,83 @@
 <!-- 詳細の上にでるやつ -->
 <!DOCTYPE html>
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
-  <head th:replace="~{layout :: head(アルバム詳細)}"></head>
-  <body>
-    <div th:replace="~{layout :: header}"></div>
-    <div th:if="${message}" th:text="${message}" style="color: blue">
-      sample message
-     <div th:if="${error}" th:text="${error}" style="color:red">sample message</div>
-    </div>
-    <h3>To Do 詳細</h3>
+
+<head th:replace="~{layout :: head(アルバム詳細)}"></head>
+
+<body>
+  <div th:replace="~{layout :: header}"></div>
+  <div th:if="${message}" th:text="${message}" style="color: blue">
+    sample message
+    <div th:if="${error}" th:text="${error}" style="color:red">sample message</div>
+  </div>
+  <h3>To Do 詳細</h3>
+  <table>
+    <tr>
+      <th>タイトル</th>
+      <td th:text="${album.title}"></td>
+    </tr>
+    <tr>
+      <th>担当者</th>
+      <td th:text="${album.artist}"></td>
+    </tr>
+    <tr>
+      <th>締め切り日</th>
+      <td th:text="${album.releaseDate}"></td>
+    </tr>
+    <tr>
+      <th>優先順位</th>
+      <td th:text="${#temporals.format(album.createdAt, 'yyyy-MM-dd HH:mm:ss')}"></td>
+      <!--ついかしたとこ-->
+    <tr>
+      <th>メモ</th>
+      <td th:text="${album.comment}"></td>
+    </tr>
+    <!--ここまで-->
+    </tr>
+
     <table>
       <tr>
-        <th>タイトル</th>
-        <td th:text="${album.title}"></td>
+        <th>タスク</th>
+        <th>日付</th>
+        <th>進行度</th>
       </tr>
-      <tr>
-        <th>担当者</th>
-        <td th:text="${album.artist}"></td>
-      </tr>
-      <tr>
-        <th>締め切り日</th>
-        <td th:text="${album.releaseDate}"></td>
-      </tr>
-      <tr>
-        <th>優先順位</th>
-        <td
-          th:text="${#temporals.format(album.createdAt, 'yyyy-MM-dd HH:mm:ss')}"
-        ></td>
-      <!--ついかしたとこ-->
-      <tr>
-        <th>メモ</th>
-        <td th:text="${album.comment}"></td>
-      </tr>
-      <!--ここまで-->
-      </tr>
+      <tr th:each="music : ${musics}">
+        <td><span th:text="${music.musicId}">music id</span></td>
+        <td><span th:text="${music.title}">music title</span></td>
+        <td><span th:text="${music.isFavorite ? '☆' : ''}">☆</span></td>
 
-      <table>
-        <tr>
-          <th>タスク</th>
-          <th>日付</th>
-          <th>進行度</th>
-        </tr>
-        <tr th:each="music : ${musics}">
-          <td><span th:text="${music.musicId}">music id</span></td>
-          <td><span th:text="${music.title}">music title</span></td>
-          <td><span th:text="${music.isFavorite ? '☆' : ''}">☆</span></td>
-          <td>
-            <span th:text="${#temporals.format(music.duration, 'HH:mm:ss')}"
-              >music duration</span
-            >
-          </td>
-  
-          <td>
-            <span th:text="${#temporals.format(music.duration, 'HH:mm:ss')}"
-              >music duration</span
-            >
-          </td>
-          <td>
-            <form
-              th:action="@{/albums/{albumId}/musics/{musicId}/edit(albumId=${album.albumId}, musicId=${music.musicId})}"
-              method="get"
-            >
-              <button type="submit">編集</button>
-            </form>
-            <form
-              th:action="@{/albums/{albumId}/musics/{musicId}/delete(albumId=${album.albumId}, musicId=${music.musicId})}"
-              method="post"
-            >
-              <button type="submit">削除</button>
-            </form>
-            <form
-              th:if="${music.isFavorite}"
-              th:action="@{/favorites/delete}"
-              method="post"
-            >
-              <input type="hidden" name="musicId" th:value="${music.musicId}" />
-              <input type="hidden" name="albumId" th:value="${album.albumId}" />
-              <button type="submit">お気に入り解除</button>
-            </form>
-            <form th:unless="${music.isFavorite}" th:action="@{/favorites}" method="post">
-              <input type="hidden" name="musicId" th:value="${music.musicId}" />
-              <input type="hidden" name="albumId" th:value="${album.albumId}" />
-              <button type="submit">お気に入り</button>
-            </form>
-          </td>
-        </tr>
-      </table>
+        <td>
+          <form
+            th:action="@{/albums/{albumId}/musics/{musicId}/edit(albumId=${album.albumId}, musicId=${music.musicId})}"
+            method="get">
+            <button type="submit">編集</button>
+          </form>
+          <form
+            th:action="@{/albums/{albumId}/musics/{musicId}/delete(albumId=${album.albumId}, musicId=${music.musicId})}"
+            method="post">
+            <button type="submit">削除</button>
+          </form>
+          <form th:if="${music.isFavorite}" th:action="@{/favorites/delete}" method="post">
+            <input type="hidden" name="musicId" th:value="${music.musicId}" />
+            <input type="hidden" name="albumId" th:value="${album.albumId}" />
+            <button type="submit">お気に入り解除</button>
+          </form>
+          <form th:unless="${music.isFavorite}" th:action="@{/favorites}" method="post">
+            <input type="hidden" name="musicId" th:value="${music.musicId}" />
+            <input type="hidden" name="albumId" th:value="${album.albumId}" />
+            <button type="submit">お気に入り</button>
+          </form>
+        </td>
+      </tr>
     </table>
-    <a th:href="@{/albums/{albumId}/musics/new(albumId=${album.albumId})}"
-      >タスクを追加</a
-    >
-    <a href="/albums">一覧に戻る</a>
-    <div th:replace="~{layout :: footer}"></div>
-  </body>
+  </table>
+  <form th:action="@{/albums/{albumId}/musics/new(albumId=${album.albumId})}">
+    <button type="submit">タスクを追加</button>
+  </form>
+  <form th:action="@{/albums}">
+    <button type="submit">一覧に戻る</button>
+  </form>
+  <div th:replace="~{layout :: footer}"></div>
+</body>
+
 </html>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="ja" xmlns:th="http://www.thymeleaf.org"
   xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
 
@@ -31,4 +32,33 @@
   </div>
 </body>
 
+=======
+<html lang="ja" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+  <head th:fragment="head(title)">
+    <meta charset="UTF-8" />
+    <title th:text="${title}">Title</title>
+  </head>
+  <body>
+    <div th:fragment="header">
+      <header>
+        <h4>To do管理アプリ</h4>
+
+        <form th:action="@{/albums}">
+              <button type="submit">タスク一覧</button>
+        </form>
+        <form th:action="@{/albums/new}">
+              <button type="submit">タスク登録</button>
+        </form>
+        <form th:action="@{/logout}" method="post">
+              <button type="submit">ログアウト</button>
+        </form>
+      </header>
+    </div>
+    <div th:fragment="footer">
+      <footer>
+        <p>&copy; To do アプリ</p>
+      </footer>
+    </div>
+  </body>
+>>>>>>> a95a0b1afb7aad2ef78176be21ccee795f846e54
 </html>
