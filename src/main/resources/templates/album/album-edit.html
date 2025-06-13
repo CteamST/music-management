@@ -20,8 +20,12 @@
       </div>
       <div>
         <label for="release-date">締切日：</label>
-        <input type="date" id="release-date" name="release-date"th:field="*{releaseDate}"/>
+        <input type="date" id="release-date" name="release-date" th:field="*{releaseDate}"/>
       </div>
+      <div>
+        <label for="comment">メモ：</label>
+        <input type="text" id="comment" name="comment" th:field="*{comment}">
+    </div>
       <div>
         <label for="priority">優先順位：</label>
         <select id="priority" name="priority" th:field="*{priority}">
