@@ -23,10 +23,15 @@
         <td th:text="${album.releaseDate}"></td>
       </tr>
       <tr>
-        <th>優先順位</th>
-        <td
-          th:text="${#temporals.format(album.createdAt, 'yyyy-MM-dd HH:mm:ss')}"
-        ></td>
+        <th>進行度：</th>
+        <td>
+          <select id="priority" name="priority">
+              <option th:value="1" th:selected="${album.priority == 1}">低</option>
+              <option th:value="2" th:selected="${album.priority == 2}">中</option>
+              <option th:value="3" th:selected="${album.priority == 3}">高</option>
+          </select>
+        </td>
+      </tr>
       <!--ついかしたとこ-->
       <tr>
         <th>メモ</th>
@@ -34,7 +39,7 @@
       </tr>
       <!--ここまで-->
       </tr>
-
+    </table>
       <table>
         <tr>
           <th>タスク</th>
