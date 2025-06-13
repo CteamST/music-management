@@ -26,9 +26,9 @@
       <input type="password" id="password" name="password" placeholder="パスワード" />
     </div>
     <button type="submit">ログイン</button>
+  </form>
+  <form th:action="@{/register}">
     <button type="submit">新規登録</button>
   </form>
   <div th:replace="~{layout :: footer}"></div>
 </body>
-
-</html>
