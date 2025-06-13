@@ -15,7 +15,7 @@
       </div>
       <div>
         <label for="daydate">日付：</label>
-        <input type="date" id="daydate" name="daydate" th:value="${music.daydate}"/>
+        <input type="date" id="daydate" name="daydate" th:field="*{daydate}" th:value="${music.daydate}"/>
       </div>
       <div>
         <label for="progress">進行度：</label>

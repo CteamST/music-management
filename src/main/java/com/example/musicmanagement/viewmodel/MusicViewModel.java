@@ -1,14 +1,14 @@
 package com.example.musicmanagement.viewmodel;
 
 import lombok.Data;
-import org.springframework.format.annotation.DateTimeFormat;
-import java.time.LocalTime;
+
+import java.time.LocalDate;
 
 @Data
 public class MusicViewModel {
     private long musicId;
     private String title;
-    @DateTimeFormat(pattern = "HH:mm:ss")
-    private LocalTime duration;
+    private int progress;
+    private LocalDate daydate;
     private boolean isFavorite;
 }
