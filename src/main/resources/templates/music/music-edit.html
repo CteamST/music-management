@@ -30,9 +30,9 @@
       </div>
       <button type="submit">変更</button>
     </form>
-    <a th:href="@{/albums/{albumId}(albumId=${music.albumId})}"
-      >タスクに戻る</a
-    >
+    <form th:action="@{/albums/{albumId}(albumId=${music.albumId})}">
+      <button type="submit">詳細一覧に戻る</button>
+    </form>
     <div th:replace="~{layout :: footer}"></div>
   </body>
 </html>

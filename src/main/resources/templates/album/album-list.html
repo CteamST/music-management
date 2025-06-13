@@ -12,7 +12,6 @@
     <table>
       <thead>
         <tr>
-          <th>ID</th>
           <th>タスク</th>
           <th>担当者</th>
           <th>締め切り日</th>
@@ -22,7 +21,6 @@
       </thead>
       <tbody>
         <tr th:each="album : ${albums}">
-          <td><span th:text="${album.albumId}">album id</span></td>
           <td><span th:text="${album.title}">album title</span></td>
           <td><span th:text="${album.artist}">album artist</span></td>
           <td><span th:text="${album.releaseDate}">album releaseDate</span></td>
@@ -39,7 +37,8 @@
             >
               <button type="submit">編集</button>
             </form>
-            <form th:action="@{/albums/{albumId}/delete(albumId=${album.albumId})}" method="post">
+            <form th:action="@{/albums/{albumId}/delete(albumId=${album.albumId})}" method="post"
+>
               <button type="submit">削除</button>
             </form>
             </form>
