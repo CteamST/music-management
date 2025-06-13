@@ -34,7 +34,7 @@ public class MusicService {
         }
         Music music = new Music();
         music.setTitle(musicForm.getTitle());
-        music.setDaydate(music.getDaydate());
+        music.setDaydate(musicForm.getDaydate());
         music.setProgress(musicForm.getProgress());
         music.setAlbumId(musicForm.getAlbumId());
         musicRepository.insertMusic(music);
