@@ -237,26 +237,25 @@ h2 {
   text-align: center;
 }
 
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
-  text-align: right;
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* 要素間の余白 */
   padding: 10px 20px;
-  box-sizing: border-box;
-  color: #777;
-  font-size: large;
-  z-index: 3000;
-  /* ヘッダーを他の要素の上に表示 */
+  background-color: #f5f5f5; /* お好みで */
 }
 
 .logo-images {
-  width: 150px;
-  height: 150px;
-  margin-right: 100px;
+  height: 40px;
+  width: auto;
 }
+
+.header-title {
+  font-size: 20px;
+  margin: 0;
+  padding: 0 10px;
+}
+
 
 .footer {
   position: fixed;

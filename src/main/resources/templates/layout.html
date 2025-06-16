@@ -12,19 +12,19 @@
 <body>
   <div th:fragment="header">
     <header>
-      <ul>
-        <img src="images/bow-work.png" alt="ロゴ" class="logo-images">
-        <h4>ToDo管理</h4>
-        <form th:action="@{/albums}">
-              <button type="submit" Class="task-button">タスク一覧</button>
-        </form>
-        <form  th:action="@{/albums/new}">
-              <button type="submit" Class="task2-button">タスク登録</button>
-        </form>
-        <form th:action="@{/logout}" method="post">
-              <button type="submit" Class = "log-button">ログアウト</button>
-        </form>
-      </ul>
+      <div class="header-container">
+      <img th:src="@{/images/bow-work.png}" alt="ロゴ" class="logo-images">
+      <h4 class="header-title">ToDo管理</h4>
+      <form th:action="@{/albums/new}">
+        <button type="submit" class="task2-button">タスク登録</button>
+      </form>
+      <form th:action="@{/albums}">
+        <button type="submit" class="task-button">タスク一覧</button>
+      </form>
+      <form th:action="@{/logout}" method="post">
+        <button type="submit" class="log-button">ログアウト</button>
+      </form>
+      </div>
     </header>
   </div>
   <div th:fragment="footer">
