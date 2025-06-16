@@ -29,94 +29,63 @@ body {
   color: white;
 }
 
-
 .add-button {
-  box-sizing: border-box;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 15px;
-  font-size: 16px;
   background-color: #ea4335;
-  color: white;
+}
+
+.add-button:hover {
+    color: #7f7f7f;
+  background-color: #fff;
+  border: 2px solid #ea4335;
+  transform: scale(1.05);
 }
 
 .back-button {
-  box-sizing: border-box;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 15px;
-  font-size: 16px;
   background-color: #4285f4;
-  color: white;
+}
+
+.back-button:hover {
+    color: #7f7f7f;
+  background-color: #fff;
+  border: 2px solid #4285f4;
+  transform: scale(1.05);
 }
 
 .edit-button {
-  box-sizing: border-box;
-  padding: 8px 18px; /* パディングを調整 */
-  margin: 5px 0;
-  border: none; /* ボーダーを削除 */
-  border-radius: 25px; /* 角を丸く */
-  font-size: 14px;
-  font-weight: bold; /* 文字を太く */
-  background-color: rgb(40, 39, 39); /* 背景色をダークグレーに */
-  color: rgb(244, 241, 241);
-  height: 40px; /* 縦幅を50ピクセルに設定 */
-  width: 130px; /* 横幅を150ピクセルに設定 */
-  transition: background-color 0.3s, transform 0.3s; /* ホバー効果のためのトランジション */
+  background-color: #545454;
 }
 
 .edit-button:hover {
   color: #7f7f7f;
   background-color: #fff;
-  border: 2px solid #4285f4;
+  border: 2px solid #545454;
   transform: scale(1.05);
 }
 
 .detail-button {
-  box-sizing: border-box;
-  padding: 10px 20px; /* パディングを調整 */
-  margin: 5px 0;
-  border: none; /* ボーダーを削除 */
-  border-radius: 25px; /* 角を丸く */
-  font-size: 14px;
-  font-weight: bold; /* 文字を太く */
-  background-color: green; /* 背景色をダークグレーに */
-  color: white;
-  height: 40px; /* 縦幅を50ピクセルに設定 */
-  width: 130px; /* 横幅を150ピクセルに設定 */
-  transition: background-color 0.3s, transform 0.3s; /* ホバー効果のためのトランジション */
+  background-color: #34a853;
 }
 
 .detail-button:hover {
   color: #7f7f7f;
   background-color: #fff;
-  border: 2px solid #4285f4;
+  border: 2px solid #34a853;
   transform: scale(1.05);
 }
 
 .delete-button {
-  box-sizing: border-box;
-  padding: 10px 20px; /* パディングを調整 */
-  margin: 5px 0;
-  border: none; /* ボーダーを削除 */
-  border-radius: 25px; /* 角を丸く */
-  font-size: 14px;
-  font-weight: bold; /* 文字を太く */
-  background-color: gray; /* 背景色をダークグレーに */
-  color: white;
-  height: 40px; /* 縦幅を50ピクセルに設定 */
-  width: 130px; /* 横幅を150ピクセルに設定 */
-  transition: background-color 0.3s, transform 0.3s; /* ホバー効果のためのトランジション */
+  background-color: #7f7f7f;
 }
 
 .delete-button:hover {
   color: #7f7f7f;
   background-color: #fff;
-  border: 2px solid #4285f4;
+  border: 2px solid #7f7f7f;
   transform: scale(1.05);
 }
 
 .change-button {
+  position: fixed;
   box-sizing: border-box;
   padding: 12px;
   margin: 2px 0;
@@ -130,6 +99,17 @@ body {
   color: #7f7f7f;
   background-color: #fff;
   border: 2px solid #4285f4;
+  transform: scale(1.05);
+}
+
+.change-button {
+  background-color: #34a853;
+}
+
+.change-button:hover {
+  color: #7f7f7f;
+  background-color: #fff;
+  border: 2px solid #34a853;
   transform: scale(1.05);
 }
 
@@ -305,6 +285,7 @@ h2 {
 }
 
 button[type="submit"] { 
+  width: 150px;
   padding: 10px;
   color: white;
   border: none;
