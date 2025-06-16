@@ -28,7 +28,7 @@
       <div>
         <input type="hidden" name="musicId" th:field="*{musicId}" />
       </div>
-      <button type="submit">変更</button>
+      <button type="submit" class="change-button">変更</button>
     </form>
     <form th:action="@{/albums/{albumId}(albumId=${music.albumId})}">
       <button type="submit">詳細一覧に戻る</button>

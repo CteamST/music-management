@@ -64,12 +64,12 @@
           <form
             th:action="@{/albums/{albumId}/musics/{musicId}/edit(albumId=${album.albumId}, musicId=${music.musicId})}"
             method="get">
-            <button type="submit">編集</button>
+            <button type="submit" class="edit2-button">編集</button>
           </form>
           <form
             th:action="@{/albums/{albumId}/musics/{musicId}/delete(albumId=${album.albumId}, musicId=${music.musicId})}"
             method="post">
-            <button type="submit">削除</button>
+            <button type="submit" class="delete2-button">削除</button>
           </form>
           <form th:if="${music.isFavorite}" th:action="@{/favorites/delete}" method="post">
             <input type="hidden" name="musicId" th:value="${music.musicId}" />
