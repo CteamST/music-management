@@ -237,6 +237,12 @@ h2 {
   /* ヘッダーを他の要素の上に表示 */
 }
 
+.logo-images {
+  width: 150px;
+  height: 150px;
+  margin-right: 100px;
+}
+
 .footer {
   position: fixed;
   bottom: 0;

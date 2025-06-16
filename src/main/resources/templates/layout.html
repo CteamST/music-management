@@ -12,8 +12,12 @@
 <body>
   <div th:fragment="header">
     <header>
-      <h4>ToDo管理</h4>
       <ul>
+        <!-- <img src='images/bow-work.png' alt="ヘッダー画像" id="header-image">
+        <h1>あなたのウェブサイト</h1> -->
+        <!-- <div class="images"></div> -->
+        <img src="images/bow-work.png" alt="ロゴ" class="logo-images">
+        <h4>ToDo管理</h4>
         <form th:action="@{/albums}">
               <button type="submit" Class="task-button">タスク一覧</button>
         </form>
