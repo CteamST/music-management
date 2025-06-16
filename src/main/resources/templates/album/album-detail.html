@@ -10,22 +10,23 @@
     sample message
     <div th:if="${error}" th:text="${error}" style="color:red">sample message</div>
   </div>
+  <section class="details">
   <h3>To Do 詳細</h3>
-  <div class="detail-row-title">
-      <span class="label">タイトル</span>
-      <span class="value" th:text="${album.title}">OOさんのタスクの詳細です</span>
+  <div class="title-line">
+      <h2>タイトル</h2>
+      <p th:text="${album.title}">OOさんのタスクの詳細です</p>
     </div>
-  <div class="flexbox">
-    <div class="detail-row-artist">
-      <span class="label">担当者</span>
+  <div class="info-grid">
+    <div>
+      <strong>担当者</strong><br>
       <span class="value" th:text="${album.artist}">山田太郎</span>
     </div>
-    <div class="detail-row-releaseDate">
-      <span class="label">締め切り日</span>
+    <div>
+      <strong>締め切り日</strong><br>
       <span class="value" th:text="${album.releaseDate}">2004年 / 9月25日</span>
     </div>
-    <div class="detail-row-priority">
-      <span class="label">優先順位</span>
+    <div>
+      <strong class="label">優先順位</strong><br>
       <span class="value" th:switch="${album.priority}">
         <span th:case="1">低</span>
         <span th:case="2">中</span>
@@ -34,17 +35,20 @@
       </span>
     </div>
   </div>
-    <div class="detail-row-comment">
-      <span class="label">メモ</span>
-      <span class="value" th:text="${album.comment}">PowerPointの説明を入力してください</span>
+    <div class="memo">
+      <strong>メモ</strong>
+      <textarea readonly th:text="${album.comment}">PowerPointの説明を入力してください</textarea>
     </div>
   </div>
-
+  </section>
+  <section class="task-list">
     <table>
       <tr>
         <th>タスク</th>
         <th>日付</th>
         <th>進行度</th>
+        <th>      </th>
+        <th>      </th>
       </tr>
       <tr th:each="music : ${musics}">
         <td><span th:text="${music.title}">music title</span></td>
@@ -81,6 +85,7 @@
       </tr>
     </table>
   </table>
+  </section>
   <form th:action="@{/albums/{albumId}/musics/new(albumId=${album.albumId})}">
     <button type="submit" class="add-button">タスクを追加</button>
   </form>
