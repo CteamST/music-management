@@ -32,20 +32,17 @@
             <span th:case="*">${album.priority}</span>
           </td>
           <td>
-            <form
-              th:action="@{/albums/{albumId}/edit(albumId=${album.albumId})}"
-              method="get"
-            >
-              <button type="submit" class="edit-button">編集</button>
-            </form>
-            <form th:action="@{/albums/{albumId}/delete(albumId=${album.albumId})}" method="post"
->
-              <button type="submit" class="delete-button">削除</button>
-            </form>
-            </form>
-            <form th:action="@{/albums/{albumId}(albumId=${album.albumId})}">
-              <button type="submit" class="detail-button">詳細</button>
-            </form>
+            <div class="action-btns">
+              <form th:action="@{/albums/{albumId}(albumId=${album.albumId})}">
+                <button type="submit" class="detail-button">詳細</button>
+              </form>
+              <form th:action="@{/albums/{albumId}/edit(albumId=${album.albumId})}" method="get">
+                <button type="submit" class="edit-button">編集</button>
+              </form>
+              <form th:action="@{/albums/{albumId}/delete(albumId=${album.albumId})}" method="post">
+                <button type="submit" class="delete-button">削除</button>
+              </form>
+            </div>
           </td>
         </tr>
       </tbody>

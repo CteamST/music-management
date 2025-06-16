@@ -127,3 +127,14 @@ footer {
     color: #aaa;
     font-size: 12px;
 }
+
+.action-btns {
+  display: flex;
+  gap: 10px; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.action-btns form {
+  margin: 0; 
+}
