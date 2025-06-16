@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ヘッダー */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px 20px;
+  background-color: #fff;
+}
+
+header h1 {
+  font-size: 20px;
+  color: #11615d;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 24px;
+}
+
+.header-buttons button {
+  margin-left: 10px;
+  padding: 10px 28px;
+  border: none;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.register-btn {
+  background-color: #e74c3c;
+}
+
+.list-btn {
+  background-color: #3498db;
+}
+
+.logout {
+  background-color: transparent;
+  color: #666;
+  font-weight: bold;
+}
+
+/* メイン */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+  color: #11615d;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* 入力欄全体 */
+.todo-register {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* タイトル行 */
+.input-row {
+  margin-bottom: 30px;
+}
+
+.input-label {
+  display: block;
+  font-weight: bold;
+  color: #888;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.input-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* 横並びの入力グループ */
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.input-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box {
+  border: 3px solid #999;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  color: #555;
+  background-color: #fff;
+}
+
+/* セレクト風ボックス */
+.select-box {
+  position: relative;
+}
+
+.select-box .arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #666;
+}
+
+/* 区切り線 */
+.divider {
+  border: none;
+  border-top: 3px solid #666;
+  margin: 30px 0;
+}
+
+/* メモ欄 */
+.memo-box {
+  border: 3px solid #999;
+  border-radius: 10px;
+  padding: 25px;
+  font-size: 16px;
+  text-align: center;
+  color: #444;
+  word-spacing: 0.15em;
+  letter-spacing: 0.05em;
+  background-color: #fff;
+}
+
+/* フッター */
+footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+}
