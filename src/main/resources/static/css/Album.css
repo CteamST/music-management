@@ -308,3 +308,14 @@ button[type="submit"] {
   box-sizing: border-box;
   font-size: large;
 }
+
+.action-btns {
+  display: flex;
+  gap: 10px; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.action-btns form {
+  margin: 0; 
+}
