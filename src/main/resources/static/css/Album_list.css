@@ -1,0 +1,124 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('../images/3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #11615d;
+}
+
+header h1::before {
+    content: '🧶';
+    margin-right: 10px;
+}
+
+nav button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+}
+
+.register-btn {
+    background-color: #e74c3c;
+}
+
+.list-btn {
+    background-color: #3498db;
+}
+
+.logout {
+    background: none;
+    color: #666;
+    font-weight: bold;
+}
+
+main {
+    padding: 40px 20px;
+}
+
+h2 {
+    color: #11615d;
+    font-size: 28px;
+    text-align: left;
+    margin-left: 60px;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+th, td {
+    padding: 20px 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+thead {
+    border-bottom: 2px solid #666;
+}
+
+td:first-child {
+    font-size: 22px;
+    color: #bbb;
+}
+
+td:first-child:empty::before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+}
+
+.action-btns button {
+    width: 70px;
+    padding: 10px 0;
+    font-size: 14px;
+    border-radius: 999px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.detail-btn {
+    background-color: #2ecc71;
+}
+
+.edit-btn {
+    background-color: #333;
+}
+
+.delete-btn {
+    background-color: #7f8c8d;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    color: #aaa;
+    font-size: 12px;
+}
