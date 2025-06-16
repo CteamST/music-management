@@ -2,7 +2,7 @@
 /* 共通スタイル */
 
 body {
-  background-image: url('../images/3.png');
+  background-image: url('../images/4.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -66,8 +66,10 @@ body {
 }
 
 .edit-button:hover {
-  background-color: gray; /* ホバー時の背景色 */
-  transform: scale(1.05); /* ホバー時の拡大 */
+  color: #7f7f7f;
+  background-color: #fff;
+  border: 2px solid #4285f4;
+  transform: scale(1.05);
 }
 
 .detail-button {
@@ -86,8 +88,10 @@ body {
 }
 
 .detail-button:hover {
-  background-color: gray; /* ホバー時の背景色 */
-  transform: scale(1.05); /* ホバー時の拡大 */
+  color: #7f7f7f;
+  background-color: #fff;
+  border: 2px solid #4285f4;
+  transform: scale(1.05);
 }
 
 .delete-button {
@@ -106,8 +110,10 @@ body {
 }
 
 .delete-button:hover {
-  background-color: white; /* ホバー時の背景色 */
-  transform: scale(1.05); /* ホバー時の拡大 */
+  color: #7f7f7f;
+  background-color: #fff;
+  border: 2px solid #4285f4;
+  transform: scale(1.05);
 }
 
 .change-button {
@@ -118,6 +124,13 @@ body {
   font-size: 16px;
   background-color: green;
   color: white;
+}
+
+.change-button:hover {
+  color: #7f7f7f;
+  background-color: #fff;
+  border: 2px solid #4285f4;
+  transform: scale(1.05);
 }
 
 .details h2 {
@@ -240,81 +253,46 @@ body {
 }
 
 .task-button {
-  box-sizing: border-box;
-  padding: 10px 20px; /* パディングを調整 */
-  margin: 5px 0;
-  border: none; /* ボーダーを削除 */
-  border-radius: 25px; /* 角を丸く */
-  font-size: 14px;
-  font-weight: bold; /* 文字を太く */
-  background-color: #4285f4; /* 背景色をダークグレーに */
-  color: white;
-  height: 40px; /* 縦幅を50ピクセルに設定 */
-  width: 130px; /* 横幅を150ピクセルに設定 */
-  transition: background-color 0.3s, transform 0.3s; /* ホバー効果のためのトランジション */
+  background-color: #4285f4;
 }
 
 .task-button:hover {
-  background-color: white; /* ホバー時の背景色 */
-  transform: scale(1.05); /* ホバー時の拡大 */
+    color: #7f7f7f;
+  background-color: #fff;
+  border: 2px solid #4285f4;
+  transform: scale(1.05);
 }
 
 .task2-button {
-  box-sizing: border-box;
-  padding: 10px 20px; /* パディングを調整 */
-  margin: 5px 0;
-  border: none; /* ボーダーを削除 */
-  border-radius: 25px; /* 角を丸く */
-  font-size: 14px;
-  font-weight: bold; /* 文字を太く */
-  background-color: #ea4335; /* 背景色をダークグレーに */
-  color: white;
-  height: 40px; /* 縦幅を50ピクセルに設定 */
-  width: 130px; /* 横幅を150ピクセルに設定 */
-  transition: background-color 0.3s, transform 0.3s; /* ホバー効果のためのトランジション */
+  background-color: #ea4335;
 }
 
 .task2-button:hover {
-  background-color: white; /* ホバー時の背景色 */
-  transform: scale(1.05); /* ホバー時の拡大 */
-}
-
-.task2-button {
-  box-sizing: border-box;
-  padding: 10px 20px; /* パディングを調整 */
-  margin: 5px 0;
-  border: none; /* ボーダーを削除 */
-  border-radius: 25px; /* 角を丸く */
-  font-size: 14px;
-  font-weight: bold; /* 文字を太く */
-  background-color: #ea4335; /* 背景色をダークグレーに */
-  color: white;
-  height: 40px; /* 縦幅を50ピクセルに設定 */
-  width: 130px; /* 横幅を150ピクセルに設定 */
-  transition: background-color 0.3s, transform 0.3s; /* ホバー効果のためのトランジション */
-}
-
-.task2-button:hover {
-  background-color: white; /* ホバー時の背景色 */
-  transform: scale(1.05); /* ホバー時の拡大 */
+  color: #7f7f7f;
+  background-color: #fff;
+  border: 2px solid #ea4335;
+  transform: scale(1.05);
 }
 
 .log-button {
-  box-sizing: border-box;
-  padding: 10px 20px; /* パディングを調整 */
-  margin: 5px 0;
-  border: none; /* ボーダーを削除 */
-  border-radius: 25px; /* 角を丸く */
-  font-size: 14px;
-  font-weight: bold; /* 文字を太く */
-  background-color: rgb(172, 170, 170); /* 背景色をダークグレーに */
-  color: white;
-  height: 40px; /* 縦幅を50ピクセルに設定 */
-  width: 130px; /* 横幅を150ピクセルに設定 */
-  transition: background-color 0.3s, transform 0.3s; /* ホバー効果のためのトランジション */
+  background-color: #7f7f7f;
 }
 
 .log-button:hover {
-  background-color: rgb(183, 181, 181); /* ホバー時の背景色 */
-  transform: scale(1.05); /* ホバー時の拡大 */
+  color: #7f7f7f;
+  background-color: #fff;
+  border: 2px solid #7f7f7f;
+  transform: scale(1.05);
+}
+
+button[type="submit"] { 
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+  margin-top: 15px;
 }
