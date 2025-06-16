@@ -6,6 +6,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .favorite-button {box-sizing: border-box;
