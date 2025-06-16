@@ -63,6 +63,18 @@ body {
   transform: scale(1.05);
 }
 
+.edit2-button {
+  background-color: #545454;
+}
+
+.edit2-button:hover {
+  color: #7f7f7f;
+  background-color: #fff;
+  border: 2px solid #545454;
+  border: 2px solid #545454;
+  transform: scale(1.05);
+}
+
 .detail-button {
   background-color: #34a853;
 }
@@ -85,21 +97,14 @@ body {
   transform: scale(1.05);
 }
 
-.change-button {
-  position: fixed;
-  box-sizing: border-box;
-  padding: 12px;
-  margin: 2px 0;
-  border-radius: 15px;
-  font-size: 16px;
-  background-color: green;
-  color: white;
+.delete2-button {
+  background-color: #7f7f7f;
 }
 
-.change-button:hover {
+.delete2-button:hover {
   color: #7f7f7f;
   background-color: #fff;
-  border: 2px solid #4285f4;
+  border: 2px solid #7f7f7f;
   transform: scale(1.05);
 }
 
@@ -227,7 +232,7 @@ h2 {
 }
 
 .logo-images {
-  height: 40px;
+  height: 150px;
   width: auto;
 }
 
@@ -296,4 +301,6 @@ button[type="submit"] {
   margin-bottom: 10px;
   transition: transform 0.3s ease;
   margin-top: 15px;
+  box-sizing: border-box;
+  font-size: large;
 }

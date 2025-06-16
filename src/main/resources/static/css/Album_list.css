@@ -1,12 +1,11 @@
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-image: url('../images/3.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+  background-image: url('../images/4.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .header {
