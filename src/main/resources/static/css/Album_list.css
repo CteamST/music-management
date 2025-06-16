@@ -9,13 +9,19 @@ body {
     margin: 0 auto;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    border-bottom: 1px solid #ccc;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  text-align: right;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  color: #777;
+  font-size: large;
+  z-index: 3000;
+  /* ヘッダーを他の要素の上に表示 */
 }
 
 header h1 {
