@@ -10,39 +10,38 @@
     sample message
     <div th:if="${error}" th:text="${error}" style="color:red">sample message</div>
   </div>
-  <section class="details">
-  <h3>To Do 詳細</h3>
-  <div class="title-line">
-      <h2>タイトル</h2>
-      <p th:text="${album.title}">OOさんのタスクの詳細です</p>
-    </div>
-  <div class="info-grid">
-    <div>
-      <strong>担当者</strong><br>
-      <span class="value" th:text="${album.artist}">山田太郎</span>
-    </div>
-    <div>
-      <strong>締め切り日</strong><br>
-      <span class="value" th:text="${album.releaseDate}">2004年 / 9月25日</span>
-    </div>
-    <div>
-      <strong class="label">優先順位</strong><br>
-      <span class="value" th:switch="${album.priority}">
+
+  <main>
+  <h2>To Do 詳細</h2>
+
+  <section class="todo-detail">
+  <div class="detail-row title">
+      <h3 th:text="${album.title}">OOさんのタスクの詳細です</h3>
+  </div>
+  <table class="detail-table">
+    <tr>
+      <th scope="col">担当者</th>
+      <td><span class="value" th:text="${album.artist}">山田太郎</span></td>
+      <th scope="col">締め切り日</th>
+      <td><span class="value" th:text="${album.releaseDate}">2004年 / 9月25日</span></td>
+      <th scope="col">優先順位</th>
+      <td><span class="value" th:switch="${album.priority}">
         <span th:case="1">低</span>
         <span th:case="2">中</span>
         <span th:case="3">高</span>
         <span th:case="*">${album.priority}</span>
-      </span>
-    </div>
-  </div>
-    <div class="memo">
-      <strong>メモ</strong>
-      <textarea readonly th:text="${album.comment}">PowerPointの説明を入力してください</textarea>
-    </div>
-  </div>
-  </section>
-  <section class="task-list">
-    <table>
+      </span></td>
+    </tr>
+    <tr>
+      <th scope="col">メモ</th>
+      <td colspan="5">
+      <div class="memo-box" th:text="${album.comment}">PowerPointの説明を入力してください</div>
+      </td>
+    </tr>
+  </table>
+ 
+  <table class="task-table">
+    <thead>
       <tr>
         <th>タスク</th>
         <th>日付</th>
@@ -50,6 +49,7 @@
         <th>      </th>
         <th>      </th>
       </tr>
+    </thead>
       <tr th:each="music : ${musics}">
         <td><span th:text="${music.title}">music title</span></td>
         <td><span th:text="${music.daydate}">music daydate</span></td>
@@ -86,6 +86,7 @@
     </table>
   </table>
   </section>
+  </main>
   <form th:action="@{/albums/{albumId}/musics/new(albumId=${album.albumId})}">
     <button type="submit" class="add-button">タスクを追加</button>
   </form>
