@@ -40,7 +40,7 @@ body {
   color: white;
 }
 
-.back-button {
+/* .back-button {
   box-sizing: border-box;
   padding: 12px;
   margin: 10px 0;
@@ -48,27 +48,25 @@ body {
   font-size: 16px;
   background-color: #4285f4;
   color: white;
-}
+} */
 
 .edit-button {
-  box-sizing: border-box;
-  padding: 8px 18px; /* パディングを調整 */
-  margin: 5px 0;
-  border: none; /* ボーダーを削除 */
-  border-radius: 25px; /* 角を丸く */
-  font-size: 14px;
-  font-weight: bold; /* 文字を太く */
-  background-color: rgb(40, 39, 39); /* 背景色をダークグレーに */
-  color: rgb(244, 241, 241);
-  height: 40px; /* 縦幅を50ピクセルに設定 */
-  width: 130px; /* 横幅を150ピクセルに設定 */
-  transition: background-color 0.3s, transform 0.3s; /* ホバー効果のためのトランジション */
+  background-color: #545454;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+  margin-top: 15px;
 }
 
 .edit-button:hover {
   color: #7f7f7f;
   background-color: #fff;
-  border: 2px solid #4285f4;
+  border: 2px solid #545454;
   transform: scale(1.05);
 }
 
