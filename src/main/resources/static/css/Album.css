@@ -6,8 +6,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: 20px;
-  max-width: 800px;
+  padding: 10px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -117,6 +117,10 @@ body {
   background-color: #fff;
   border: 2px solid #34a853;
   transform: scale(1.05);
+}
+
+.col {
+  font-style: bold;
 }
 
 .details h2 {
@@ -232,7 +236,7 @@ h2 {
 }
 
 .logo-images {
-  height: 150px;
+  height: 200px;
   width: auto;
 }
 
