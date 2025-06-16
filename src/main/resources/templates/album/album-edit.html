@@ -28,8 +28,7 @@
       <div class="input-block">
         <label class="input-label" for="release-date">締切日</label>
         <input class="input-box" type="date" id="release-date" name="release-date" th:field="*{releaseDate}"/>
-      </div>
-      <div　class="input-block">
+      </div> class="input-block">
         <label  class="input-label" for="priority">優先順位</label>
         <select  class="input-box select-box" id="priority" name="priority" th:field="*{priority}">
           <option th:value="1" th:selected="${album.priority == 1}">低</option>
