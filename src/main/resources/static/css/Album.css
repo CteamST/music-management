@@ -83,6 +83,10 @@ body {
   transform: scale(1.05);
 }
 
+.notEdit2-button {
+  height: 60px;
+}
+
 .detail-button {
   background-color: #34a853;
 }
@@ -116,6 +120,10 @@ body {
   transform: scale(1.05);
 }
 
+.notDelete2-button {
+  height: 60px;
+}
+
 .change-button {
   background-color: #34a853;
 }
@@ -125,6 +133,10 @@ body {
   background-color: #fff;
   border: 2px solid #34a853;
   transform: scale(1.05);
+}
+
+.notChange-button {
+  height: 60px;
 }
 
 .col {

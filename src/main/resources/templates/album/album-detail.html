@@ -63,12 +63,12 @@
         <td>
           <div class="action-btns">
             <form th:action="@{/albums/{albumId}/musics/{musicId}/edit(albumId=${album.albumId}, musicId=${music.musicId})}" method="get">
-              <button type="submit" class="edit2-button">編集</button>
+              <div class = notEdit2-button><button type="submit" class="edit2-button">編集</button></div>
             </form>
             <form
               th:action="@{/albums/{albumId}/musics/{musicId}/delete(albumId=${album.albumId}, musicId=${music.musicId})}"
               method="post">
-              <button type="submit" class="delete2-button">削除</button>
+              <div class = notDelete2-button><button type="submit" class="delete2-button">削除</button></div>
             </form>
           </div>
         </td>
