@@ -118,37 +118,37 @@ input[type="password"] {
 
 /*—— ログインボタン ——*/
 .login-button {
-  background-color: #e74c3c;
+  background-color: #ea4335;
 }
 .login-button:hover {
   background-color: #fff;
-  color: #e74c3c;
-  outline: 2px solid #e74c3c; /* レイアウトに影響しない枠線 */
+  color: #ea4335;
+  outline: 2px solid #ea4335; /* レイアウトに影響しない枠線 */
   outline-offset: -2px;       /* ボタンの端に合わせる */
   transform: scale(1.05);
 }
 
 /*—— 新規登録ボタン ——*/
 .register-button {
-  background-color: #3498db;
+  background-color: #4285f4;
 }
 .register-button:hover {
   background-color: #fff;
-  color: #3498db;
-  outline: 2px solid #3498db;
+  color: #4285f4;
+  outline: 2px solid #4285f4;
   outline-offset: -2px;
   transform: scale(1.05);
 }
 
 /*—— メッセージ表示 ——*/
 .error-msg {
-  color: red;
+  color: #ea4335;
   font-size: 14px;
   margin-bottom: 10px;
 }
 
 .info-msg {
-  color: blue;
+  color: #4285f4;
   font-size: 14px;
   margin-bottom: 10px;
 }

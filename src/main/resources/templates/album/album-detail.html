@@ -80,9 +80,6 @@
   <form th:action="@{/albums/{albumId}/musics/new(albumId=${album.albumId})}">
     <div class = notAdd-button><button type="submit" class="add-button">ミニタスクを追加</button></div>
   </form>
-  <form th:action="@{/albums}">
-    <div class = notBack-button><button type="submit" class="back-button">一覧に戻る</button></div>
-  </form>
   <div th:replace="~{layout :: footer}"></div>
 </body>
 
