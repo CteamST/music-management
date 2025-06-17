@@ -7,15 +7,11 @@
     <div th:replace="~{layout :: header}"></div>
     <main>
     <h2>タスク編集</h2>
-    <form
-      th:action="@{/albums/{albumId}/edit(albumId=${album.albumId})}"
-      th:object="${album}"
-      method="post"
-    >
+    <form th:action="@{/albums/{albumId}/edit(albumId=${album.albumId})}" th:object="${album}" method="post">
     <section class="todo-register">
       <div class="input-row">
         <label class="input-label" for="title">タイトル</label>
-        <input  class="input-text" type="text" id="title" name="title" th:field="*{title}" />
+        <input  class="input-box" type="text" id="title" name="title" th:field="*{title}" />
       </div>
 
       <hr class="divider" />
@@ -29,8 +25,8 @@
         <label class="input-label" for="release-date">締切日</label>
         <input class="input-box" type="date" id="release-date" name="release-date" th:field="*{releaseDate}"/>
       </div>
-      <div>
-        <label  class="input-label" for="priority">優先順位</label>
+      <div divclass="input-block">
+        <label class="input-label" for="priority">優先順位</label>
         <select  class="input-box select-box" id="priority" name="priority" th:field="*{priority}">
           <option th:value="1" th:selected="${album.priority == 1}">低</option>
           <option th:value="2" th:selected="${album.priority == 2}">中</option>
@@ -38,12 +34,15 @@
         </select>
       </div>
 
-      <div class="input-row">
+      <div class="input-block">
         <label class="input-label" for="comment">メモ</label>
-        <input class="memo-box" type="text" id="comment" name="comment" th:field="*{comment}">
-    </div>
+        <input class="input-box" type="text" id="comment" name="comment" th:field="*{comment}">
+      </div>
+      </div>
+    </section>
       <button type="submit" Class="change-button">変更</button>
     </form>
+    </main>
     <div th:replace="~{layout :: footer}"></div>
   </body>
 </html>

@@ -194,7 +194,7 @@ h2 {
   border-radius: 10px;
   padding: 25px;
   font-size: 16px;
-  background-color: #fff;
+  /* background-color: #fff; */
   color: #555;
   text-align: center;
   width: 100%;
@@ -255,18 +255,11 @@ h2 {
 }
 
 
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
-  text-align: center;
-  padding: 10px 20px;
-  box-sizing: border-box;
-  color: #777;
-  z-index: 3000;
-  /* フッターを他の要素の上に表示 */
+footer {
+    padding: 10px;
+    text-align: center;
+    color: #aaa;
+    font-size: 12px;
 }
 
 .task-button {
@@ -315,4 +308,15 @@ button[type="submit"] {
   margin-top: 15px;
   box-sizing: border-box;
   font-size: large;
+}
+
+.action-btns {
+  display: flex;
+  gap: 10px; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.action-btns form {
+  margin: 0; 
 }
