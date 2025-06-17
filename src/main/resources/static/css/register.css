@@ -10,6 +10,7 @@ html, body {
   padding: 0;
   height: 100vh;
   overflow: hidden;         /* スクロールバーを非表示 */
+  cursor: url('/images/dog.png') 16 16, default;
 }
 
 body {
@@ -150,4 +151,14 @@ input[type="password"] {
   color: blue;
   font-size: 14px;
   margin-bottom: 10px;
+}
+
+.circle {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+  background-size: cover;
 }
