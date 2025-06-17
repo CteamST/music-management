@@ -41,23 +41,7 @@ public class AlbumController {
   public String albums(Model model,@RequestParam(required = false, defaultValue = "1") int page) {
     // List<Album> albums = albumService.getAllAlbums();
     List<AlbumViewModel> albums = albumService.getAllAlbumsWithMusicCount();
-    int limitNum = 10;
-    int maxCount = albums.size();
-    int maxPages = (maxCount -1) / limitNum + 1;
-    int count = maxCount - limitNum * (page -1);
-    List<AlbumViewModel> currenAlbums = new ArrayList<>();
-
-    if(count >= limitNum){
-      currenAlbums = new ArrayList<>(albums.subList((page -1) * limitNum, limitNum));
-    } else if(count > 0){
-      currenAlbums = new ArrayList<>(albums.subList((page -1) * limitNum, (page -1) * limitNum + count));
-    }
-
-    model.addAttribute("albums", currenAlbums);
-    model.addAttribute("pages", maxPages);
-    model.addAttribute("currentPage", page);
-
-
+    
     for (int i = 0; i < albums.size(); i++){
       // albumsから1件データを取り出す
       AlbumViewModel date = albums.get(i);
@@ -68,7 +52,23 @@ public class AlbumController {
       // Progressのリストを取り出したalbumsのデータに代入する
       date.setProgress(music);
     }
-    model.addAttribute("albums", albums);
+    
+    int limitNum = 10;
+    int maxCount = albums.size();
+    int maxPages = (maxCount -1) / limitNum + 1;
+    int count = maxCount - limitNum * (page -1);
+    List<AlbumViewModel> currenAlbums = new ArrayList<>();
+    
+    if(count >= limitNum){
+      currenAlbums = new ArrayList<>(albums.subList((page -1) * limitNum, limitNum));
+    } else if(count > 0){
+      currenAlbums = new ArrayList<>(albums.subList((page -1) * limitNum, (page -1) * limitNum + count));
+    }
+
+    model.addAttribute("albums", currenAlbums);
+    model.addAttribute("pages", maxPages);
+    model.addAttribute("currentPage", page);
+
     return "album/album-list";
   }
 
