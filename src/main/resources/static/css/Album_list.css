@@ -46,11 +46,11 @@ nav button {
 }
 
 .register-btn {
-    background-color: #ea4335;
+    background-color: #e74c3c;
 }
 
 .list-btn {
-    background-color: #4285f4;
+    background-color: #3498db;
 }
 
 .logout {
@@ -73,7 +73,6 @@ h2 {
 table {
     width: 90%;
     margin: 20px auto;
-    border-collapse: collapse;
     font-size: 16px;
 }
 
