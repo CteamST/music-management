@@ -45,14 +45,15 @@ button.add-button[type="submit"]{
   transition: transform 0.3s ease;
   margin-top: 15px;
   box-sizing: border-box;
-  font-size: medium;
+  font-size: small;
 }
 
-.add-button:hover {
+button.add-button:hover {
   color: #7f7f7f;
   background-color: #fff;
   border: 2px solid #ea4335;
   transform: scale(1.05);
+  font-size: small;
 }
 
 .notAdd-button {
