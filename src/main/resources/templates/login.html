@@ -1,34 +1,31 @@
-<!-- ログイン -->
 <!DOCTYPE html>
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ToDo管理</title>
-  <link rel="stylesheet" href="css/register.css">
+  <link rel="stylesheet" href="/css/register.css?v=10">
 </head>
-
 <body>
-  <!-- <div th:replace="~{layout :: header}"></div> -->
-  <h3>ログイン</h3>
-  <div th:if="${param.error}" style="color: red">
-    ユーザ名、またはパスワードが違います
-  </div>
-  <div th:if="${param.register}" style="color: blue">登録に成功しました</div>
-  <form th:action="@{/login}" method="post">
-    <div>
-      <label for="username"></label>
-      <input type="text" id="username" name="username" placeholder="ユーザー名" />
+  <main class="login-container">
+    <!-- 左カラム -->
+    <div class="login-left">
+      <h2 class="slide-bounce-title">To Do <strong>管理</strong></h2>
+
+      <div th:if="${param.error}" class="error-msg">ユーザ名、またはパスワードが違います</div>
+      <div th:if="${param.register}" class="info-msg">登録に成功しました</div>
+
+      <form th:action="@{/login}" method="post" class="login-form">
+        <input type="text" id="username" name="username" placeholder="ユーザー名" />
+        <input type="password" id="password" name="password" placeholder="パスワード" />
+
+        <!-- ✅ 横並びボタン -->
+        <div class="button-row">
+          <button type="submit" class="login-button">ログイン</button>
+          <a th:href="@{/register}" class="register-button">新規登録</a>
+        </div>
+      </form>
     </div>
-    <div>
-      <label for="password"></label>
-      <input type="password" id="password" name="password" placeholder="パスワード" />
-    </div>
-    <div class = "notWorkingLogin"><button type="submit" class="login-button">ログイン</button></div>
-  </form>
-  <form th:action="@{/register}">
-    <div class = "notWorkingRegister"><button type="submit" class="register-button">新規登録</button></div>
-  </form>
-  <div th:replace="~{layout :: footer}"></div>
+  </main>
 </body>
+</html>
