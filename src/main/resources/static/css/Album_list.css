@@ -150,3 +150,20 @@ footer {
 .action-btns form {
   margin: 0; 
 }
+.hover-container .tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+  position: absolute; /* これを追加 */
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* 他のスタイルがあればここに追加 */
+}
+
+.hover-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
