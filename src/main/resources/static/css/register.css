@@ -75,6 +75,7 @@ button[type="submit"] {
 
 .login-button {
   background-color: #ea4335;
+  border: 2px solid #ea4335;
 }
 
 .login-button:hover {
@@ -84,8 +85,25 @@ button[type="submit"] {
   transform: scale(1.05);
 }
 
+.nandemo {
+  height: 60px;
+}
+
+.nandemo button {
+  width: 100%;
+}
+
+.nandemo2 {
+  height: 60px;
+}
+
+.nandemo2 button {
+  width: 100%;
+}
+
 .register-button {
   background-color: #4285f4;
+  border: 2px solid #4285f4;
 }
 
 .register-button:hover {
@@ -93,6 +111,22 @@ button[type="submit"] {
   background-color: #fff;
   border: 2px solid #4285f4;
   transform: scale(1.05);
+}
+
+.notWorkingRegister {
+  height: 60px;
+}
+
+.notWorkingRegister button {
+  width: 100%;
+}
+
+.notWorkingLogin {
+  height: 60px;
+}
+
+.notWorkingLogin button {
+  width: 100%;
 }
 
 /* 追加のスタイル */

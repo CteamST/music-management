@@ -58,6 +58,10 @@ header h1 {
   transform: scale(1.05);
 }
 
+.notAdd3-button {
+  height: 60px;
+}
+
 .register-btn {
   background-color: #e74c3c;
 }

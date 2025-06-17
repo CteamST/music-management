@@ -8,7 +8,7 @@
     <div>
         <div th:if="${error}" th:text="${error}" style="color:red">sample message</div>
     </div>
-    <h2>ToDo 一覧</h2>
+    <h2>タスク一覧</h2>
     <table>
       <thead>
         <tr>
@@ -33,21 +33,14 @@
           </td>
           <td>
             <div class="action-btns">
-              <div class="hover-container">
-                <p class="hover-text">
-                  <form th:action="@{/albums/{albumId}(albumId=${album.albumId})}">
-                    <button type="submit" class="detail-button">詳細</button>
-                  </form>
-                </p>
-                <div class="tooltip">
-                  aaa
-                </div>
-              </div>
+              <form th:action="@{/albums/{albumId}(albumId=${album.albumId})}">
+                <button type="submit" class="detail-button">詳細</button>
+              </form>
               <form th:action="@{/albums/{albumId}/edit(albumId=${album.albumId})}" method="get">
-                <button type="submit" class="edit-button">編集</button>
+                <div class = "notEdit-button"><button type="submit" class="edit-button">編集</button></div>
               </form>
               <form th:action="@{/albums/{albumId}/delete(albumId=${album.albumId})}" method="post">
-                <button type="submit" class="delete-button">削除</button>
+                <div class = "notDelete-button"><button type="submit" class="delete-button">削除</button></div>
               </form>
             </div>
           </td>
