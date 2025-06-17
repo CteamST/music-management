@@ -1,154 +1,145 @@
-/* register.css */
+/* ベース設定 */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  background-image: url('/images/3.png');
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 100%;
-  width: 100%;
-  color: #555555;
   margin: 0;
-  font-weight: bold;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background: url('/images/3.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* 2カラムレイアウト */
+.login-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+  gap: 60px;
+  min-height: 100vh;
+}
+
+/* 左側 */
+.login-left {
+  flex: 1;
+  max-width: 600px;
+}
+
+.login-right {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
-.container {
+.login-image {
+  max-width: 80%;
+  height: auto;
+}
+
+/* タイトルアニメーション */
+.slide-bounce-title {
+  font-size: 48px;
+  color: #11615d;
+  font-weight: bold;
+  margin-bottom: 40px;
+  animation: slideBounce 1.8s ease-out forwards;
+  opacity: 1;
+}
+
+@keyframes slideBounce {
+  0% {
+    opacity: 0;
+    transform: translateX(200px) scale(0.9);
+  }
+  30% {
+    opacity: 1;
+    transform: translateX(0) scale(1.05);
+  }
+  45% {
+    transform: translateY(-20px) scale(0.98);
+  }
+  60% {
+    transform: translateY(0) scale(1.03);
+  }
+  75% {
+    transform: translateY(-10px) scale(0.99);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 入力フォーム */
+.login-form {
   display: flex;
-  flex-direction: row;
-  height: 100vh;
-  flex-wrap: wrap;
-}
-
-h3 {
-  color: #19676b;
-  margin-bottom: 60px;
-  margin-right: 0px;
-  margin-top: 180px;
-  font-size: 60px;
-}
-
-form {
-  display: flex;
   flex-direction: column;
-  width: 300px;
+  gap: 20px;
 }
-
 
 input[type="text"],
 input[type="password"] {
   width: 100%;
-  /* 入力フィールドを親要素の幅いっぱいに広げる */
-  box-sizing: border-box;
-  /* paddingとborderを幅に含める */
-  padding: 15px;
-  margin: 10px 0px 0px 0px;
-  border-radius: 15px;
-  border: 2px solid #7f7f7f;
-  font-size: 16px;
-  color: #a0a0a0;
+  padding: 18px;
+  font-size: 18px;
+  border: 3px solid #888;
+  border-radius: 10px;
+  text-align: center;
+  color: #888;
+  background-color: white;
+  font-weight: bold;
   outline: none;
 }
 
-
-button[type="submit"] { 
-  padding: 10px;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease;
-  margin-top: 15px;
+/* ボタン横並び */
+.button-row {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
 }
 
-/* button[type="submit"]:hover { 
-  color: #7f7f7f;
-  background-color: #fff;
-  border: 2px solid #4285f4;
-} */
+.login-button,
+.register-button {
+  flex: 1;
+  padding: 16px 44px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 999px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
 
 .login-button {
-  background-color: #ea4335;
-  border: 2px solid #ea4335;
+  background-color: #e74c3c;
 }
-
 .login-button:hover {
-  color: #7f7f7f;
-  background-color: #fff;
-  border: 2px solid #ea4335;
+  background-color: white;
+  color: #e74c3c;
+  border: 2px solid #e74c3c;
   transform: scale(1.05);
-}
-
-.nandemo {
-  height: 60px;
-}
-
-.nandemo button {
-  width: 100%;
-}
-
-.nandemo2 {
-  height: 60px;
-}
-
-.nandemo2 button {
-  width: 100%;
 }
 
 .register-button {
-  background-color: #4285f4;
-  border: 2px solid #4285f4;
+  background-color: #3498db;
 }
-
 .register-button:hover {
-  color: #7f7f7f;
-  background-color: #fff;
-  border: 2px solid #4285f4;
+  background-color: white;
+  color: #3498db;
+  border: 2px solid #3498db;
   transform: scale(1.05);
 }
 
-.notWorkingRegister {
-  height: 60px;
+/* メッセージ表示 */
+.error-msg {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
-.notWorkingRegister button {
-  width: 100%;
+.info-msg {
+  color: blue;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
-
-.notWorkingLogin {
-  height: 60px;
-}
-
-.notWorkingLogin button {
-  width: 100%;
-}
-
-/* 追加のスタイル */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
-  text-align: right;
-  padding: 10px 20px;
-  box-sizing: border-box;
-  color: #777;
-  font-size: large;
-  z-index: 3000;
-  /* ヘッダーを他の要素の上に表示 */
-}
-
-footer {
-    padding: 10px;
-    text-align: center;
-    color: #aaa;
-    font-size: 12px;
-}
-
