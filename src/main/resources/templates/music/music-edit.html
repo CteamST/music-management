@@ -36,10 +36,10 @@
           <input type="hidden" name="musicId" th:field="*{musicId}" />
         </div>
       </div>
-      <button type="submit" class="change-button">変更</button>
+      <div class = notChange-button><button type="submit" Class="change-button">変更</button></div>
     </form>
     <form th:action="@{/albums/{albumId}(albumId=${music.albumId})}">
-      <button type="submit">詳細一覧に戻る</button>
+      <div class = notBackToDetailList-button><button type="submit" class = "backToDetailList-button">詳細一覧に戻る</button></div>
     </form>
     </main>
     <div th:replace="~{layout :: footer}"></div>
