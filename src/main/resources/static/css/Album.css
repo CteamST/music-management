@@ -34,7 +34,7 @@ body {
 }
 
 .add-button:hover {
-    color: #7f7f7f;
+  color: #7f7f7f;
   background-color: #fff;
   border: 2px solid #ea4335;
   transform: scale(1.05);
@@ -279,7 +279,7 @@ footer {
 }
 
 .task-button:hover {
-    color: #7f7f7f;
+    color: #4285f4;
   background-color: #fff;
   border: 2px solid #4285f4;
   transform: scale(1.05);
@@ -290,7 +290,7 @@ footer {
 }
 
 .task2-button:hover {
-  color: #7f7f7f;
+  color: #ea4335;
   background-color: #fff;
   border: 2px solid #ea4335;
   transform: scale(1.05);
