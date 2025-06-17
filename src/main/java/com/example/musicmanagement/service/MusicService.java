@@ -5,6 +5,7 @@ import com.example.musicmanagement.repository.MusicRepository;
 import org.springframework.stereotype.Service;
 import com.example.musicmanagement.form.MusicForm;
 import com.example.musicmanagement.viewmodel.MusicViewModel;
+import com.example.musicmanagement.viewmodel.Progress;
 import com.example.musicmanagement.exception.AlbumNotFoundException;
 import com.example.musicmanagement.entity.Album;
 import com.example.musicmanagement.repository.AlbumRepository;
@@ -63,6 +64,10 @@ public class MusicService {
 
     public List<MusicViewModel> selectMusicsWithFavorite(long albumId, long userId) {
         return musicRepository.selectMusicsWithFavorite(albumId, userId);
+    }
+
+    public List<Progress> progressCount(long albumId){
+        return musicRepository.progressCount(albumId);
     }
 
 }

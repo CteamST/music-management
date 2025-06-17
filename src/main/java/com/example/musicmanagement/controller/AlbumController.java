@@ -16,6 +16,8 @@ import com.example.musicmanagement.form.MusicForm;
 import com.example.musicmanagement.viewmodel.AlbumViewModel;
 import com.example.musicmanagement.security.CustomUserDetails;
 import com.example.musicmanagement.viewmodel.MusicViewModel;
+import com.example.musicmanagement.viewmodel.Progress;
+
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 
 import java.util.List;
@@ -36,6 +38,16 @@ public class AlbumController {
   public String albums(Model model) {
     // List<Album> albums = albumService.getAllAlbums();
     List<AlbumViewModel> albums = albumService.getAllAlbumsWithMusicCount();
+    for (int i = 0; i < albums.size(); i++){
+      // albumsから1件データを取り出す
+      AlbumViewModel date = albums.get(i);
+      // 取り出したデータからalbumIdを取り出す
+      long albumId = date.getAlbumId();
+      // albumIdを使ってDBからProgressのリストを取り出す
+      List<Progress> music = musicService.progressCount(albumId);
+      // Progressのリストを取り出したalbumsのデータに代入する
+      date.setProgress(music);
+    }
     model.addAttribute("albums", albums);
     return "album/album-list";
   }
