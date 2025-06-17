@@ -33,9 +33,16 @@
           </td>
           <td>
             <div class="action-btns">
-              <form th:action="@{/albums/{albumId}(albumId=${album.albumId})}">
-                <button type="submit" class="detail-button">詳細</button>
-              </form>
+              <div class="hover-container">
+                <div class="hover-text">
+                  <form th:action="@{/albums/{albumId}(albumId=${album.albumId})}">
+                    <button type="submit" class="detail-button">詳細</button>
+                  </form>
+                </div>
+                <div class="tooltip">
+                  aaaa
+                </div>
+              </div>
               <form th:action="@{/albums/{albumId}/edit(albumId=${album.albumId})}" method="get">
                 <div class = "notEdit-button"><button type="submit" class="edit-button">編集</button></div>
               </form>
