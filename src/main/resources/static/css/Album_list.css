@@ -166,3 +166,9 @@ footer {
   visibility: visible;
   opacity: 1;
 }
+
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

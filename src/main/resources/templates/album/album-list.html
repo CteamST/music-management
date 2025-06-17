@@ -59,14 +59,16 @@
         </tr>
       </tbody>
     </table>
-    <ul>
-      <li th:each = "i : ${#numbers.sequence(1, pages)}" style="display:inline; margin-left:10">
-        <span th:if = "${i} == ${currentPage}" th:text = ${i}>現在のページ</span>
-        <a th:if="${i} != ${currentPage}" th:href="@{/albums(page=${i})}" th:date-page="${i}">
-          <span th:text="${i}"></span>
-        </a>
-      </li>
-    </ul>
+    <div class="page">
+      <ul>
+        <li th:each = "i : ${#numbers.sequence(1, pages)}" style="display:inline; margin-left:10">
+          <span th:if = "${i} == ${currentPage}" th:text = ${i}>現在のページ</span>
+          <a th:if="${i} != ${currentPage}" th:href="@{/albums(page=${i})}" th:date-page="${i}">
+            <span th:text="${i}"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
     <div th:replace="~{layout :: footer}"></div>
   </body>
 </html>
