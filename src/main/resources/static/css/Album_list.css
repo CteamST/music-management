@@ -121,6 +121,18 @@ td:first-child:empty::before {
     background-color: #7f8c8d;
 }
 
+.notDetail-button {
+    height: 60px;
+}
+
+.notEdit-button {
+    height: 60px;
+}
+
+.notDelete-button {
+    height: 60px;
+}
+
 footer {
     padding: 10px;
     text-align: center;
