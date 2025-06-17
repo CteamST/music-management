@@ -105,7 +105,7 @@ header h1 {
 
 /* メイン */
 main {
-  padding: 40px 60px;
+  padding: 0px 0px;
 }
 
 h2 {
@@ -180,7 +180,7 @@ h2 {
 /* 区切り線 */
 .divider {
   border: none;
-  border-top: 3px solid #666;
+  border-top: 3px solid #7f7f7f;
   margin: 30px 0;
 }
 
