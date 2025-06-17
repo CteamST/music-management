@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ToDo管理</title>
-  <link rel="stylesheet" href="css/register.css">
+  <link rel="stylesheet" href="/css/register.css?v=11">
 </head>
-
 <body>
-  <!-- <div th:replace="~{layout :: header}"></div> -->
-  <h3>新規登録</h3>
-  <form th:action="@{/register}" th:object="${userForm}" method="post">
-    <div>
-      <label for="username"></label>
-      <input type="text" id="username" name="username" th:field="*{username}" placeholder="ユーザー名" />
-    </div>
-    <div>
-      <label for="password"></label>
-      <input type="password" id="password" name="password" th:field="*{password}" placeholder="パスワード" />
-    </div>
-    <div class = "nandemo"><button type="submit" class="register-button">登録</button></div>
-  </form>
-  <form th:action="@{/login}">
-    <div class = "nandemo2"><button type="submit" class="login-button">ログイン</button></div>
-  </form>
-  <div th:replace="~{layout :: footer}"></div>
-</body>
+  <main class="login-container">
+    <!-- 左カラム -->
+    <div class="login-left">
+      <h2 class="slide-bounce-title">新規登録</h2>
 
+      <form th:action="@{/register}" th:object="${userForm}" method="post" class="login-form">
+        <input type="text" id="username" name="username" th:field="*{username}" placeholder="ユーザー名" />
+        <input type="password" id="password" name="password" th:field="*{password}" placeholder="パスワード" />
+
+        <!-- 横並びの登録＆ログインボタン -->
+        <div class="button-row">
+          <button type="submit" class="register-button">登録</button>
+          <a th:href="@{/login}" class="login-button">ログイン</a>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
 </html>
