@@ -118,7 +118,6 @@ input[type="password"] {
 /*—— ログインボタン ——*/
 .login-button {
   background-color: #e74c3c;
-  height: 30px;
 }
 .login-button:hover {
   background-color: #fff;
@@ -128,9 +127,9 @@ input[type="password"] {
   transform: scale(1.05);
 }
 
+/*—— 新規登録ボタン ——*/
 .register-button {
   background-color: #3498db;
-  height: 60px;
 }
 .register-button:hover {
   background-color: #fff;
@@ -140,7 +139,7 @@ input[type="password"] {
   transform: scale(1.05);
 }
 
-
+/*—— メッセージ表示 ——*/
 .error-msg {
   color: red;
   font-size: 14px;
