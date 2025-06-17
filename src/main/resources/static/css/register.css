@@ -109,10 +109,12 @@ input[type="password"] {
   cursor: pointer;
   text-align: center;
   text-decoration: none;
+
 }
 
 .login-button {
   background-color: #e74c3c;
+  height: 30px;
 }
 .login-button:hover {
   background-color: white;
@@ -121,8 +123,13 @@ input[type="password"] {
   transform: scale(1.05);
 }
 
+/* .notLogin-button {
+  height: 10px;
+} */
+
 .register-button {
   background-color: #3498db;
+  height: 60px;
 }
 .register-button:hover {
   background-color: white;
@@ -130,6 +137,10 @@ input[type="password"] {
   border: 2px solid #3498db;
   transform: scale(1.05);
 }
+
+/* .notRegister-button {
+  height: 10px;
+} */
 
 /* メッセージ表示 */
 .error-msg {
