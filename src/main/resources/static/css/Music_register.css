@@ -48,13 +48,13 @@ header h1 {
 }
 
 .add3-button {
-  background-color: #e74c3c;
+  background-color: #ea4335;
 }
 
 .add3-button:hover {
-    color: #7f7f7f;
+    color: #ea4335;
   background-color: #fff;
-  border: 2px solid #e74c3c;
+  border: 2px solid #ea4335;
   transform: scale(1.05);
 }
 
@@ -63,7 +63,7 @@ header h1 {
 }
 
 .register-btn {
-  background-color: #e74c3c;
+  background-color: #ea4335;
 }
 
 .list-btn {

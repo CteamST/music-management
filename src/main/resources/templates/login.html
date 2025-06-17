@@ -7,26 +7,28 @@
   <link rel="stylesheet" href="/css/register.css?v=10">
 </head>
 <body>
-  <main class="login-container">
-    <!-- 左カラム -->
-    <div class="login-left">
-      <img src="../images/icon.png" alt="代替テキスト" title="ロゴ" style="width: 150px; height: 150px;">
-      <h2 class="slide-bounce-title">わんわーく<strong></strong></h2>
+    <main class="login-container">
+      <!-- 左カラム -->
+      <div class="login-left">
+        <img src="../images/icon.png" alt="代替テキスト" title="ロゴ" style="width: 150px; height: 150px;">
+        <h2 class="slide-bounce-title">わんわーく<strong></strong></h2>
 
-      <div th:if="${param.error}" class="error-msg">ユーザ名、またはパスワードが違います</div>
-      <div th:if="${param.register}" class="info-msg">登録に成功しました</div>
+        <div th:if="${param.error}" class="error-msg">ユーザ名、またはパスワードが違います</div>
+        <div th:if="${param.register}" class="info-msg">登録に成功しました</div>
 
-      <form th:action="@{/login}" method="post" class="login-form">
-        <input type="text" id="username" name="username" placeholder="ユーザー名" />
-        <input type="password" id="password" name="password" placeholder="パスワード" />
+        <form th:action="@{/login}" method="post" class="login-form">
+          <input type="text" id="username" name="username" placeholder="ユーザー名" />
+          <input type="password" id="password" name="password" placeholder="パスワード" />
 
-        <!-- ✅ 横並びボタン -->
-        <div class="button-row">
-          <button type="submit" class="login-button">ログイン</button>
-          <a th:href="@{/register}" class="register-button">新規登録</a>
-        </div>
-      </form>
-    </div>
-  </main>
+          <!-- ✅ 横並びボタン -->
+          <div class="button-row">
+            <button type="submit" class="login-button" id="play-sound">ログイン</button>
+            <a th:href="@{/register}" class="register-button">新規登録</a>
+          </div>
+        </form>
+      </div>
+    </main>
+  <div class="circle" id="circle"></div>
+  <script src="/js/login.js"></script>
 </body>
 </html>
