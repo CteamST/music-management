@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import com.example.musicmanagement.form.AlbumForm;
 import com.example.musicmanagement.form.MusicForm;
 import com.example.musicmanagement.viewmodel.AlbumViewModel;
@@ -20,6 +22,7 @@ import com.example.musicmanagement.viewmodel.Progress;
 
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -35,9 +38,26 @@ public class AlbumController {
   }
 
   @GetMapping
-  public String albums(Model model) {
+  public String albums(Model model,@RequestParam(required = false, defaultValue = "1") int page) {
     // List<Album> albums = albumService.getAllAlbums();
     List<AlbumViewModel> albums = albumService.getAllAlbumsWithMusicCount();
+    int limitNum = 10;
+    int maxCount = albums.size();
+    int maxPages = (maxCount -1) / limitNum + 1;
+    int count = maxCount - limitNum * (page -1);
+    List<AlbumViewModel> currenAlbums = new ArrayList<>();
+
+    if(count >= limitNum){
+      currenAlbums = new ArrayList<>(albums.subList((page -1) * limitNum, limitNum));
+    } else if(count > 0){
+      currenAlbums = new ArrayList<>(albums.subList((page -1) * limitNum, (page -1) * limitNum + count));
+    }
+
+    model.addAttribute("albums", currenAlbums);
+    model.addAttribute("pages", maxPages);
+    model.addAttribute("currentPage", page);
+
+
     for (int i = 0; i < albums.size(); i++){
       // albumsから1件データを取り出す
       AlbumViewModel date = albums.get(i);

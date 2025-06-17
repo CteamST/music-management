@@ -40,12 +40,12 @@
                   </form>
                 </div>
                 <div class="tooltip">
-                  <span th:text="${album.progress}"></span>
-                  <!-- <span th:text="${album.progress[0].count}"></span>
-                  
-                  <tr th:each = "prog : ${album.progress}">
-                    <td th:text="${prog.count}"></td>
-                  </tr> -->
+                  <div th:each = "prog : ${album.progress}">
+                    <span th:if="${prog.progress == 1}">未着手：</span>
+                    <span th:if="${prog.progress == 2}">進行中：</span>
+                    <span th:if="${prog.progress == 3}">完了：</span>
+                    <span th:text="${prog.count}"></span>
+                  </div>
                 </div>
               </div>
               <form th:action="@{/albums/{albumId}/edit(albumId=${album.albumId})}" method="get">
@@ -59,6 +59,12 @@
         </tr>
       </tbody>
     </table>
+    <div th:each = "i : ${#numbers.sequence(1, pages)}" style="display:inline; margin-left:10">
+      <span th:if = "${i} == ${currentPage}" th:text = ${i}>現在のページ</span>
+      <a th:if="${i} != ${currentPage}" th:href="@{/album(page${i})}" th:date-page="${i}">
+        <span th:text="${i}"></span>
+      </a>
+    </div>
     <div th:replace="~{layout :: footer}"></div>
   </body>
 </html>
