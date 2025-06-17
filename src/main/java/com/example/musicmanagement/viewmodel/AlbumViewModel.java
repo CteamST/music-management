@@ -2,6 +2,7 @@ package com.example.musicmanagement.viewmodel;
 
 import lombok.Data;
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 public class AlbumViewModel {
@@ -11,4 +12,5 @@ public class AlbumViewModel {
     private int priority;
     private LocalDate releaseDate;
     private int musicCount;
+    private List<Progress> progress;
 }

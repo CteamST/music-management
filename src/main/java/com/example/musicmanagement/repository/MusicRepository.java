@@ -4,6 +4,8 @@ import com.example.musicmanagement.entity.Music;
 import com.example.musicmanagement.mapper.MusicMapper;
 import org.springframework.stereotype.Repository;
 import com.example.musicmanagement.viewmodel.MusicViewModel;
+import com.example.musicmanagement.viewmodel.Progress;
+
 import java.util.List;
 
 @Repository
@@ -38,4 +40,7 @@ public class MusicRepository {
         return musicMapper.selectMusicsWithFavorite(albumId, userId);
     }
 
+    public List<Progress> progressCount(long albumId){
+        return musicMapper.progressCount(albumId);
+    }
 }

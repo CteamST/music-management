@@ -8,6 +8,8 @@ import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Update;
 import com.example.musicmanagement.viewmodel.MusicViewModel;
+import com.example.musicmanagement.viewmodel.Progress;
+
 import java.util.List;
 
 @Mapper
@@ -39,6 +41,8 @@ public interface MusicMapper {
             LEFT JOIN favorites ON musics.music_id = favorites.music_id AND favorites.user_id = #{userId}
             WHERE album_id = #{albumId}
             """)
-    List<MusicViewModel> selectMusicsWithFavorite(long albumId, long userId);
+            List<MusicViewModel> selectMusicsWithFavorite(long albumId, long userId);
+    @Select("SELECT progress, COUNT(progress) AS count FROM musics WHERE album_id = #{albumId} GROUP BY progress")
+    List<Progress> progressCount(long albumId);
 
 }

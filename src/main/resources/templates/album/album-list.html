@@ -40,7 +40,12 @@
                   </form>
                 </div>
                 <div class="tooltip">
-                  aaaa
+                  <span th:text="${album.progress}"></span>
+                  <!-- <span th:text="${album.progress[0].count}"></span>
+                  
+                  <tr th:each = "prog : ${album.progress}">
+                    <td th:text="${prog.count}"></td>
+                  </tr> -->
                 </div>
               </div>
               <form th:action="@{/albums/{albumId}/edit(albumId=${album.albumId})}" method="get">
