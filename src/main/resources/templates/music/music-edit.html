@@ -5,7 +5,7 @@
   <body>
     <div th:replace="~{layout :: header}"></div>
     <main>
-    <h3>日報編集</h3>
+    <h3>ミニタスク編集</h3>
     <form
       th:action="@{/albums/{albumId}/musics/{musicId}/edit(albumId=${music.albumId}, musicId=${music.musicId})}"
       th:object="${music}"
@@ -17,7 +17,7 @@
     <hr class="divider" />
       <div class="input-group">
         <div class="input-block">
-          <label class="input-label" for="title">タスク</label>
+          <label class="input-label" for="title">ミニタスク</label>
           <input class="input-box" type="text" id="title" name="title" th:field="*{title}" />
         </div>
         <div class="input-block">
@@ -36,7 +36,7 @@
           <input type="hidden" name="musicId" th:field="*{musicId}" />
         </div>
       </div>
-      <div class = notChange-button><button type="submit" Class="change-button">変更</button></div>
+      <div class = notChange-button><button type="submit" class="change-button">変更</button></div>
     </form>
     <form th:action="@{/albums/{albumId}(albumId=${music.albumId})}">
       <div class = notBackToDetailList-button><button type="submit" class = "backToDetailList-button">詳細一覧に戻る</button></div>

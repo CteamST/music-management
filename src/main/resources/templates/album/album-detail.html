@@ -12,7 +12,7 @@
   </div>
 
   <main>
-  <h2>To Do 詳細</h2>
+  <h2>タスク詳細</h2>
 
   <section class="todo-detail">
   <div class="detail-row title">
@@ -43,7 +43,7 @@
   <table class="task-table">
     <thead>
       <tr>
-        <th>タスク</th>
+        <th>ミニタスク</th>
         <th>日付</th>
         <th>進行度</th>
         <th>      </th>
@@ -78,7 +78,7 @@
   </section>
   </main>
   <form th:action="@{/albums/{albumId}/musics/new(albumId=${album.albumId})}">
-    <div class = notAdd-button><button type="submit" class="add-button">タスクを追加</button></div>
+    <div class = notAdd-button><button type="submit" class="add-button">ミニタスクを追加</button></div>
   </form>
   <form th:action="@{/albums}">
     <div class = notBack-button><button type="submit" class="back-button">一覧に戻る</button></div>

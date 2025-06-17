@@ -6,7 +6,7 @@
   <body>
     <div th:replace="~{layout :: header}"></div>
     <main>
-    <h3>タスク登録</h3>
+    <h3>ミニタスク登録</h3>
     <form
       th:action="@{/albums/{albumId}/musics/new(albumId=${musicForm.albumId})}"
       th:object="${musicForm}"
@@ -17,7 +17,7 @@
       <hr class="divider" />
       <div class="input-group">
         <div  class="input-block">
-          <label class="input-label"  for="title">タスク</label>
+          <label class="input-label"  for="title">ミニタスク</label>
           <input  class="input-box" type="text" id="title" name="title" th:field="*{title}" />
         </div>
       <div class="input-block">
