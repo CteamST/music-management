@@ -2,7 +2,7 @@
 /* 共通スタイル */
 
 body {
-  background-image: url('../images/4.png');
+  background-image: url('../images/background.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
