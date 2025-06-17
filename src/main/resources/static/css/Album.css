@@ -11,28 +11,6 @@ body {
   margin: 0 auto;
 }
 
-.favorite-button {box-sizing: border-box;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 15px;
-  font-size: 12px;
-  background-color: #f6ae41; /* オレンジ */
-  color: white;
-}
-
-.favorite-button2 {box-sizing: border-box;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 15px;
-  font-size: 16px;
-  background-color: #f6ae41; /* オレンジ */
-  color: white;
-}
-
-.add-button {
-  background-color: #ea4335;
-}
-
 button.add-button[type="submit"]{
   width: 150px;
   padding: 10px;
@@ -46,6 +24,10 @@ button.add-button[type="submit"]{
   margin-top: 15px;
   box-sizing: border-box;
   font-size: medium;
+}
+
+.add-button {
+  background-color: #ea4335;
 }
 
 .add-button:hover {
@@ -76,7 +58,7 @@ button.add-button[type="submit"]{
 }
 
 .edit2-button:hover {
-  color: #7f7f7f;
+  color: #545454;
   background-color: #fff;
   border: 2px solid #545454;
   border: 2px solid #545454;
@@ -92,7 +74,7 @@ button.add-button[type="submit"]{
 }
 
 .detail-button:hover {
-  color: #7f7f7f;
+  color: #34a853;
   background-color: #fff;
   border: 2px solid #34a853;
   transform: scale(1.05);
@@ -129,7 +111,7 @@ button.add-button[type="submit"]{
 }
 
 .change-button:hover {
-  color: #7f7f7f;
+  color: #34a853;
   background-color: #fff;
   border: 2px solid #34a853;
   transform: scale(1.05);
