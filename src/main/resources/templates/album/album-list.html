@@ -32,9 +32,9 @@
           <td><span th:text="${album.artist}">album artist</span></td>
           <td><span th:text="${album.releaseDate}">album releaseDate</span></td>
           <td th:switch="${album.priority}">
-            <span th:case="1">低</span>
-            <span th:case="2">中</span>
-            <span th:case="3">高</span>
+            <span th:case="1" style="color: #7f7f7f;">低</span>
+            <span th:case="2" style="color: #545454;">中</span>
+            <span th:case="3" style="color: #ea4335;">高</span>
             <span th:case="*">${album.priority}</span>
           </td>
           <td>
