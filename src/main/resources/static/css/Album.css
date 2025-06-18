@@ -144,7 +144,7 @@ h2 {
   text-align: center;
   padding: 15px 0;
   margin: 0;
-  border-bottom: 3px solid #666;
+  border-bottom: 3px solid #7f7f7f;
   color: #555;
 }
 
@@ -211,7 +211,7 @@ h2 {
 }
 
 .task-table thead {
-  border-bottom: 3px solid #666;
+  border-bottom: 3px solid #7f7f7f;
 }
 
 .task-table th {
