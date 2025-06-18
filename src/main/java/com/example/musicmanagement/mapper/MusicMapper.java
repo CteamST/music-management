@@ -40,6 +40,7 @@ public interface MusicMapper {
             FROM musics
             LEFT JOIN favorites ON musics.music_id = favorites.music_id AND favorites.user_id = #{userId}
             WHERE album_id = #{albumId}
+            ORDER BY daydate ASC;
             """)
             List<MusicViewModel> selectMusicsWithFavorite(long albumId, long userId);
     @Select("SELECT progress, COUNT(progress) AS count FROM musics WHERE album_id = #{albumId} GROUP BY progress")
