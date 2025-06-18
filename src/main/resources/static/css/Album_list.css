@@ -73,6 +73,7 @@ h2 {
 table {
     width: 90%;
     margin: 20px auto;
+    border-collapse: collapse;
     font-size: 16px;
 }
 
@@ -165,10 +166,4 @@ footer {
 .hover-container:hover .tooltip {
   visibility: visible;
   opacity: 1;
-}
-
-.page{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
