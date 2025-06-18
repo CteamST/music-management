@@ -82,7 +82,7 @@ th, td {
     padding: 20px 10px;
     text-align: center;
     vertical-align: middle;
-    /* border-bottom: 3px solid #7f7f7f; */
+    color: #545454;
 }
 
 tbody {
