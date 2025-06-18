@@ -6,6 +6,7 @@ body {
   padding: 20px;
   max-width: 900px;
   margin: 0 auto;
+  font-weight: bold;
 }
 
 .header {
@@ -82,6 +83,10 @@ th, td {
     text-align: center;
     vertical-align: middle;
     /* border-bottom: 3px solid #7f7f7f; */
+}
+
+tbody {
+    font-weight: bold;
 }
 
 thead {

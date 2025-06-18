@@ -9,6 +9,7 @@ body {
   padding: 10px;
   max-width: 900px;
   margin: 0 auto;
+  font-weight: bold;
 }
 
 button.add-button[type="submit"]{
@@ -119,7 +120,7 @@ button.add-button:hover {
   height: 60px;
 }
 
-.col {
+.tr {
   font-style: bold;
 }
 

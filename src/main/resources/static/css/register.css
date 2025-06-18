@@ -14,6 +14,7 @@ body {
   color: #11615d;
   background: url('/images/3.png') no-repeat center center fixed;
   background-size: cover;
+  font-weight: bold;
 }
 
 /*—— 画面全体を固定2カラム ——*/
