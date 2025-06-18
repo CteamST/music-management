@@ -48,8 +48,9 @@
                   </form>
                 </div>
                 <div class="tooltip">
-                  <a>メモ：</a>
-                  <span th:each="album : ${albums}" th:text="${album.comment}"></span>
+                  <div th:if="${album.comment != ''}">メモ：
+                  <span th:text="${album.comment}"></span>
+                  </div>
                   <div th:each="prog : ${album.progress}">
                     <span th:if="${prog.progress == 1}">未着手：</span>
                     <span th:if="${prog.progress == 2}">進行中：</span>
