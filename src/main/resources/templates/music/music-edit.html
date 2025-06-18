@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
-  <head th:replace="~{layout :: head(楽曲編集)}"></head>
+  <head th:replace="~{layout :: head(ミニタスク編集)}">
+  <title th:text="${pageTitle}">ミニタスク編集</title>
+  </head>
   <link rel="stylesheet" th:href="@{/css/Music_register.css}">
   <body>
     <div th:replace="~{layout :: header}"></div>
