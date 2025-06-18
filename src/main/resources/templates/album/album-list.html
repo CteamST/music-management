@@ -15,16 +15,16 @@
     <table>
       <thead>
         <tr>
-          <th></th>
+          <!-- <th></th> -->
           <th>タスク</th>
           <th>担当者</th>
-          <th>締め切り日</th>
+          <th>締切日</th>
           <th>優先順位</th>
         </tr>
       </thead>
       <tbody>
         <tr th:each="album : ${albums}">
-          <td></td>
+          <!-- <td></td> -->
           <td><span th:text="${album.title}">album title</span></td>
           <td><span th:text="${album.artist}">album artist</span></td>
           <td><span th:text="${album.releaseDate}">album releaseDate</span></td>
