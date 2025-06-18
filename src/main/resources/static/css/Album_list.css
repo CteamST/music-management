@@ -157,24 +157,39 @@ footer {
 .action-btns form {
   margin: 0; 
 }
+.hover-container {
+  position: relative;
+  display: inline-block;
+}
+
 .hover-container .tooltip {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+  
+  width: 300px;              /* ★ 固定幅にすることでバランス取れる */
+  text-align: left;          /* ★ 行のそろえ方は左でもOK */
+  white-space: normal;       /* ★ 自然に改行可能にする */
+
+  padding: 8px 12px;
+  background-color: #f9f9f9;
+  color: #333;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s;
-  position: absolute; /* これを追加 */
-  background-color: #f9f9f9;
-  color: #333;
-  padding: 5px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  /* 他のスタイルがあればここに追加 */
-  transform: translateX(-50%); 
+  z-index: 1000;
 }
 
 .hover-container:hover .tooltip {
   visibility: visible;
   opacity: 1;
 }
+
 
 .page{
     display: flex;
