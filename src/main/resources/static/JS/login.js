@@ -7,6 +7,32 @@ document.addEventListener('mousemove', (event) => {
   circle.style.top = (event.pageY - offsetY) + 'px';
 });
 
+let lastTime = 0;
+const delay = 100; // 影を生成する間隔（ミリ秒）
+
+document.addEventListener('mousemove', function(e) {
+  const currentTime = Date.now();
+  if (currentTime - lastTime > delay) {
+    const shadow = document.createElement('div');
+    shadow.className = 'cursor-shadow';
+    shadow.style.left = `${e.pageX}px`;
+    shadow.style.top = `${e.pageY}px`;
+    document.body.appendChild(shadow);
+
+    // 影を徐々に消す
+    setTimeout(() => {
+      shadow.style.opacity = '0';
+    }, 50);
+
+    // DOMから影を削除
+    setTimeout(() => {
+      document.body.removeChild(shadow);
+    }, 550);
+
+    lastTime = currentTime;
+  }
+});
+
 window.addEventListener("DOMContentLoaded", () => {
   const title = document.querySelector('.slide-bounce-title');
   const text = "わんわーく";
