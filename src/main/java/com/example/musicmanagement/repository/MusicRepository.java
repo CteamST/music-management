@@ -28,6 +28,10 @@ public class MusicRepository {
         musicMapper.deleteMusicById(musicId);
     }
 
+    public void deleteMusicByAlbumId(long albumId) {
+        musicMapper.deleteMusicByAlbumId(albumId);
+    }
+
     public void updateMusic(Music music) {
         musicMapper.updateMusic(music);
     }
