@@ -10,6 +10,7 @@ body {
   max-width: 900px;
   margin: 0 auto;
   font-weight: bold;
+  cursor: url('/images/dog.png') 16 16, default;
 }
 
 button.add-button[type="submit"]{
@@ -313,4 +314,15 @@ button[type="submit"] {
 
 .action-btns form {
   margin: 0; 
+}
+
+/*—— カーソル用円 ———*/
+.circle {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+  background-size: cover;
 }
