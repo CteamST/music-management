@@ -81,10 +81,11 @@ th, td {
     padding: 20px 10px;
     text-align: center;
     vertical-align: middle;
+    /* border-bottom: 3px solid #7f7f7f; */
 }
 
 thead {
-    border-bottom: 2px solid #666;
+    border-bottom: 3px solid #666;
 }
 
 td:first-child {
@@ -166,4 +167,10 @@ footer {
 .hover-container:hover .tooltip {
   visibility: visible;
   opacity: 1;
+}
+
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
