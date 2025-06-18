@@ -189,16 +189,17 @@ h2 {
   /* background-color: #fff; */
   color: #555;
   text-align: center;
-  width: 100%;
   font-weight: normal;
   letter-spacing: 0.05em;
-  word-spacing: 0.15em;
+  word-spacing: 0.15em; 
 }
 
 .memo-box strong {
   font-weight: normal;
   color: #555;
 }
+
+
 
 /* タスクテーブル */
 .task-table {
