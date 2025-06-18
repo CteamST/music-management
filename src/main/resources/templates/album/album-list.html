@@ -21,7 +21,7 @@
           <th></th>
           <th>タスク</th>
           <th>担当者</th>
-          <th>締め切り日</th>
+          <th>締切日</th>
           <th>優先順位</th>
         </tr>
       </thead>
@@ -51,7 +51,7 @@
                   <div th:each="prog : ${album.progress}">
                     <span th:if="${prog.progress == 1}">未着手：</span>
                     <span th:if="${prog.progress == 2}">進行中：</span>
-                    <span th:if="${prog.progress == 3}">完了：</span>
+                    <span th:if="${prog.progress == 3}">完了　：</span>
                     <span th:text="${prog.count}"></span>
                   </div>
                 </div>
