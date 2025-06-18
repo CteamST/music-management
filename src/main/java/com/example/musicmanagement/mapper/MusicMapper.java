@@ -24,6 +24,9 @@ public interface MusicMapper {
     @Delete("DELETE FROM musics WHERE music_id = #{musicId}")
     void deleteMusicById(long musicId);
 
+    @Delete("DELETE FROM musics WHERE album_id = #{albumId}")
+    void deleteMusicByAlbumId(long albumId);
+
     @Update("UPDATE musics SET title = #{title}, daydate = #{daydate}, progress = #{progress} WHERE music_id = #{musicId}")
     void updateMusic(Music music);
 

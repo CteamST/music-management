@@ -45,6 +45,10 @@ public class MusicService {
         musicRepository.deleteMusicById(musicId);
     }
 
+    public void deleteMusicByAlbumId(long albumId) {
+        musicRepository.deleteMusicByAlbumId(albumId);
+    }
+
     public Music getMusicById(long musicId) {
         return musicRepository.selectMusicById(musicId);
     }
