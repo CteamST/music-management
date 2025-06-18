@@ -40,26 +40,26 @@ button.add-button:hover {
 }
 
 .edit-button {
-  background-color: #545454;
+  background-color: #fbbc05;
 }
 
 .edit-button:hover {
-  color: #545454;
+  color: #fbbc05;
   background-color: #fff;
-  border: 2px solid #545454;
-  border: 2px solid #545454;
+  border: 2px solid #fbbc05;
+  border: 2px solid #fbbc05;
   transform: scale(1.05);
 }
 
 .edit2-button {
-  background-color: #545454;
+  background-color: #fbbc05;
 }
 
 .edit2-button:hover {
-  color: #545454;
+  color: #fbbc05;
   background-color: #fff;
-  border: 2px solid #545454;
-  border: 2px solid #545454;
+  border: 2px solid #fbbc05;
+  border: 2px solid #fbbc05;
   transform: scale(1.05);
 }
 
