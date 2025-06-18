@@ -1,28 +1,24 @@
 /*—— グローバル設定 ——*/
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
-
 html, body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  overflow: hidden;         /* スクロールバーを非表示 */
+  overflow: hidden;
   cursor: url('/images/dog.png') 16 16, default;
 }
-
 body {
   font-family: 'Segoe UI', sans-serif;
-  color: #333;
+  color: #11615d;
   background: url('/images/3.png') no-repeat center center fixed;
   background-size: cover;
 }
 
 /*—— 画面全体を固定2カラム ——*/
 .login-container {
-  position: fixed;          /* ビューポートに対して固定 */
+  position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   display: flex;
   justify-content: space-between;
@@ -36,36 +32,36 @@ body {
   flex: 1;
   max-width: 600px;
 }
-
 .login-right {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .login-image {
   max-width: 80%;
   height: auto;
 }
 
-/*—— タイトルアニメーション ——*/
+/*—— タイトル（わんわーく）アニメーション ——*/
 .slide-bounce-title {
   font-size: 48px;
-  color: #11615d;
   font-weight: bold;
   margin-bottom: 40px;
-  animation: slideBounce 1.8s ease-out forwards;
-  opacity: 1;
+  display: flex;
+  gap: 6px;
 }
-
-@keyframes slideBounce {
-  0%   { opacity: 0; transform: translateX(200px) scale(0.9); }
-  30%  { opacity: 1; transform: translateX(0) scale(1.05); }
-  45%  { transform: translateY(-20px) scale(0.98); }
-  60%  { transform: translateY(0) scale(1.03); }
-  75%  { transform: translateY(-10px) scale(0.99); }
-  100% { transform: translateY(0) scale(1); }
+.slide-bounce-title span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: floatUp 0.6s ease-out forwards;
+}
+@keyframes floatUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*—— フォーム入力 ——*/
@@ -74,9 +70,7 @@ body {
   flex-direction: column;
   gap: 20px;
 }
-
-input[type="text"],
-input[type="password"] {
+input[type="text"], input[type="password"] {
   width: 100%;
   padding: 18px;
   font-size: 18px;
@@ -96,13 +90,12 @@ input[type="password"] {
 }
 
 /*—— 共通ボタンスタイル ——*/
-.login-button,
-.register-button {
+.login-button, .register-button {
   flex: 1;
   padding: 16px 44px;
   font-size: 18px;
   font-weight: bold;
-  border: none;             /* 通常時は枠線なし */
+  border: none;
   outline: none;
   border-radius: 999px;
   color: #fff;
@@ -123,8 +116,8 @@ input[type="password"] {
 .login-button:hover {
   background-color: #fff;
   color: #ea4335;
-  outline: 2px solid #ea4335; /* レイアウトに影響しない枠線 */
-  outline-offset: -2px;       /* ボタンの端に合わせる */
+  outline: 2px solid #ea4335;
+  outline-offset: -2px;
   transform: scale(1.05);
 }
 
@@ -146,13 +139,13 @@ input[type="password"] {
   font-size: 14px;
   margin-bottom: 10px;
 }
-
 .info-msg {
   color: #4285f4;
   font-size: 14px;
   margin-bottom: 10px;
 }
 
+/*—— カーソル用円 ———*/
 .circle {
   position: absolute;
   width: 32px;
