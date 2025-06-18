@@ -167,6 +167,7 @@ footer {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   /* 他のスタイルがあればここに追加 */
+  transform: translateX(-50%); 
 }
 
 .hover-container:hover .tooltip {
